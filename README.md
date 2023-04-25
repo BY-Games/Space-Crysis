@@ -2,6 +2,9 @@
 A Game-Dev project of Astronaut and Survival.
 ![Alt text](Assets/Formal%20Elements/Game%20Screenshot.png)
 
+# Play on itch.io
+[Play](https://by-games.itch.io/space-crysis)
+
 # Overview
 Space Crysis is a puzzle game that tells the story of an astronaut who finds himself on a damaged spaceship that is about to crash. As he drifts through space, exhausted and with only a few tools at his disposal, he must use them wisely to navigate his way through the ship and reach the emergency switches before it's too late.
 
