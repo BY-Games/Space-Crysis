@@ -13,8 +13,8 @@ public class PipeThrower : MonoBehaviour
             float impactStrength = collision.relativeVelocity.magnitude;
             // Calculate the throw direction and apply force to the astronaut
             Debug.Log("Got Collision");
-            collision.gameObject.transform.position = ExitPipe.position;
             Vector2 throwDirection = ExitPipe.position - transform.position; // use the pipe's right direction
+            collision.gameObject.transform.position = ExitPipe.position; // Teleport to other side of pipe
             Debug.Log("Direction Vector " + throwDirection);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(throwDirection * impactStrength * throwForce, ForceMode2D.Impulse);
         }

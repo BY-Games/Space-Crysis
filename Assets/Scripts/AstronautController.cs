@@ -7,10 +7,11 @@ public class AstronautController : MonoBehaviour
     public float throwForce = 10f;
     public float maxDragDistance = 5f;
     public float dragMultiplier = 5f;
-    public LineRenderer dragLine;
     public Camera gameCamera;
     public float linearDrag = 0.1f;
     public float angularDrag = 0.1f;
+
+    // [SerializeField] Transform centerObject;
 
     private Rigidbody2D rb;
     private Vector3 dragStart;
@@ -24,8 +25,6 @@ public class AstronautController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.drag = linearDrag;
         rb.angularDrag = angularDrag;
-        dragLine.enabled = false;
-
         cameraBounds = new Bounds(gameCamera.transform.position, new Vector3(gameCamera.orthographicSize * gameCamera.aspect * 2, gameCamera.orthographicSize * 2, 0));
     }
 
@@ -33,12 +32,9 @@ public class AstronautController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            dragStart = transform.position;
+            dragStart = gameObject.GetComponent<Collider2D>().bounds.center;
             isDragging = true;
             dragDistance = 0f;
-            dragLine.enabled = true;
-            dragLine.SetPosition(0, dragStart);
-            dragLine.SetPosition(1, dragStart);
         }
         else if (Input.GetMouseButton(0) && isDragging)
         {
@@ -48,9 +44,8 @@ public class AstronautController : MonoBehaviour
             // Clamp the mouse position to the bounds of the camera
             Vector3 clampedMousePosition = cameraBounds.ClosestPoint(mousePosition);
             
-            dragDistance = Mathf.Min(Vector3.Distance(clampedMousePosition, dragStart), maxDragDistance);
+            dragDistance = Vector3.Distance(clampedMousePosition, dragStart);
             dragEnd = dragStart + (clampedMousePosition - dragStart).normalized * dragDistance;
-            dragLine.SetPosition(1, dragEnd);
         }
         else if (Input.GetMouseButtonUp(0) && isDragging)
         {
@@ -60,7 +55,6 @@ public class AstronautController : MonoBehaviour
             Vector3 throwDirection = (dragEnd - dragStart).normalized;
             throwRb.AddForce(throwDirection * dragDistance * dragMultiplier, ForceMode2D.Impulse);
             rb.AddForce(-throwDirection * dragDistance * dragMultiplier, ForceMode2D.Impulse);
-            dragLine.enabled = false;
         }
     }
 }
