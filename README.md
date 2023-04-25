@@ -19,5 +19,15 @@ Drag your mouse on the screen to apply throwing force of your tools, use the rig
 - Puzzle game that requires the player to think strategically.
 - The game will present prominent objects to assist the player.
 
+# Code
+
+The game includes two scenes, a Tutorial, and a level 1 scenario.
+
+[AnstonautController](Assets/Scripts/AstronautController.cs) Handle the movement mechanic of the astronaut, capture the mouse position while pressed down to determine the range of the swing of the shot. when the mouse press has released the distance and direction will be calculated and added to the Rigidbody-force multiplied by the custom force adder from the developer's choice.
+
+In level 1, there is a pipe object that will push the player toward the end of the pipe, the pipe object contain collider at the start point to detect collision and an end point for applying navigation. in [PipeThrower](Assets/Scripts/PipeThrower.cs), the OnCollisionEnter2D method will send the player to the end point of the pipe and add a force on the player's rigid body related to the relative velocity of the impact plus custom pipe property force set by the developer.
+
+
+
 # Credits
 Child-Support Game was developed by Yosef and Barak.
