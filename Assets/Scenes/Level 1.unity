@@ -824,8 +824,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwObject: {fileID: 8968012946453357171, guid: ca3c3d9bb8000ec459b3ddee3b87dcbe, type: 3}
-  throwForce: 5
-  maxDragDistance: 10
   dragMultiplier: 5
   gameCamera: {fileID: 519420031}
   linearDrag: 0.6
@@ -1170,7 +1168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca34200d92d7fec48b2413be8314645a, type: 3}
   m_Name: 
@@ -3240,8 +3238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwObject: {fileID: 0}
-  throwForce: 5
-  maxDragDistance: 5
   dragMultiplier: 5
   gameCamera: {fileID: 0}
   linearDrag: 0.1

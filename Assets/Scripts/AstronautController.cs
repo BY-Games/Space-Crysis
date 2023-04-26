@@ -4,12 +4,12 @@ using UnityEngine;
 public class AstronautController : MonoBehaviour
 {
     public GameObject throwObject;
-    public float throwForce = 10f;
-    public float maxDragDistance = 5f;
-    public float dragMultiplier = 5f;
-    public Camera gameCamera;
-    public float linearDrag = 0.1f;
-    public float angularDrag = 0.1f;
+    // public float throwForce = 10f;
+    // public float maxDragDistance = 5f;
+    [SerializeField] float dragMultiplier = 5f;
+    [SerializeField] Camera gameCamera;
+    [SerializeField] float linearDrag = 0.1f;
+    [SerializeField] float angularDrag = 0.1f;
 
     // [SerializeField] Transform centerObject;
 
@@ -32,29 +32,40 @@ public class AstronautController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            // Get the astronaut center position from the collider
             dragStart = gameObject.GetComponent<Collider2D>().bounds.center;
+            // Set to dragging mode - ON
             isDragging = true;
             dragDistance = 0f;
         }
         else if (Input.GetMouseButton(0) && isDragging)
         {
+
+            // get mouse position in every frame of holding mouse down.
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0;
 
             // Clamp the mouse position to the bounds of the camera
             Vector3 clampedMousePosition = cameraBounds.ClosestPoint(mousePosition);
             
+            // calculate distance from astrunaut to current point when releasing mouse press
             dragDistance = Vector3.Distance(clampedMousePosition, dragStart);
-            dragEnd = dragStart + (clampedMousePosition - dragStart).normalized * dragDistance;
+            Vector3 dragArrowBody = (clampedMousePosition - dragStart).normalized * dragDistance;
+            dragEnd = dragStart + dragArrowBody;
         }
         else if (Input.GetMouseButtonUp(0) && isDragging)
         {
             isDragging = false;
             GameObject throwObj = Instantiate(throwObject, transform.position, Quaternion.identity);
+            // get the rigidbody of object to throw 
             Rigidbody2D throwRb = throwObj.GetComponent<Rigidbody2D>();
+            // direction vector for throwing object
             Vector3 throwDirection = (dragEnd - dragStart).normalized;
-            throwRb.AddForce(throwDirection * dragDistance * dragMultiplier, ForceMode2D.Impulse);
-            rb.AddForce(-throwDirection * dragDistance * dragMultiplier, ForceMode2D.Impulse);
+            // add force to the throwing object (Distance of dragged arrow, direction and extra force by developer choice)
+            Vector3 TotalForce = throwDirection * dragDistance * dragMultiplier;
+            throwRb.AddForce(TotalForce, ForceMode2D.Impulse);
+            // add the opposite throw for the astronaut
+            rb.AddForce(-TotalForce, ForceMode2D.Impulse);
         }
     }
 }
