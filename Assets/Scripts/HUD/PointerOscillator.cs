@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class PointerOscillator : MonoBehaviour
 {
-   [SerializeField] Transform switchKey;
     float range = 0.1f;
      uint speed = 2;
     float axis = 0;
     float point;    
-
-    private void Start() {
-        transform.position = Camera.main.ScreenToViewportPoint(switchKey.position + (Vector3.up * 10));
-    }
 
 
     // Update is called once per frame
     void Update()
     {
         // Debug.Log(transform.position);
-        axis = (axis % (2*Mathf.PI)) + Time.deltaTime * speed;
+        float sinCycle = (2*Mathf.PI);
+        axis = (axis % sinCycle) + Time.deltaTime * speed;
         point = Mathf.Sin(axis) * range;
         GetComponent<Transform>().position = new Vector3(transform.position.x,transform.position.y + point,transform.position.z); 
        
