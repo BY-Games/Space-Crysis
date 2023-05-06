@@ -7,9 +7,10 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    // LoaderCanvas and ProgressBar are the display between the scenes.
     [SerializeField] private GameObject _loaderCanvas;
     [SerializeField] private Image _progressBar;
-
+    // Detect the scene load status in any given time.
     private float _target;
     public static LevelManager Instance;
     private void Awake() {
@@ -45,6 +46,6 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target, 3 * Time.deltaTime);
+        _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / 0.9f, 3 * Time.deltaTime);
     }
 }
