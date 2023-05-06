@@ -33,4 +33,9 @@ In level 1, there is a pipe object that will push the player toward the end of t
 
 
 # Credits
-Child-Support Game was developed by Yosef and Barak.
+Space Crysis Game was developed by Yosef and Barak.
+
+## Assets
+- [2D Character - Astronaut](https://assetstore.unity.com/packages/2d/characters/2d-character-astronaut-182650)
+- [Dotted Arrow](https://assetstore.unity.com/packages/tools/gui/dotted-arrow-213121)
+- [Basic Icons](https://assetstore.unity.com/packages/2d/gui/icons/basic-icons-139575)
