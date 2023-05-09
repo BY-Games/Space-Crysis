@@ -12,6 +12,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Image _progressBar;
     // Detect the scene load status in any given time.
     private float _target;
+    // Max value of scene loading progress is 0.9f
+    private const float unityMaxLoad = 0.9f;
+    private const float zeroValue = 0;
     public static LevelManager Instance;
     private void Awake() {
         if(Instance == null) {
@@ -23,8 +26,8 @@ public class LevelManager : MonoBehaviour
     }
 
     public async void LoadScene(string sceneName) {
-        _target = 0;
-        _progressBar.fillAmount = 0;
+        _target = zeroValue;
+        _progressBar.fillAmount = zeroValue;
 
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
@@ -34,7 +37,7 @@ public class LevelManager : MonoBehaviour
         {
             await Task.Delay(100);
             _target = scene.progress;
-        } while (scene.progress < 0.9f);
+        } while (scene.progress < unityMaxLoad);
         await Task.Delay(1000); // need to DISCARD
         // Loading complete we can activate the next scene.
         scene.allowSceneActivation = true;
@@ -42,10 +45,34 @@ public class LevelManager : MonoBehaviour
         _loaderCanvas.SetActive(false);
 
     }
+    
+    public IEnumerator LoadScenes(string sceneName)
+    {
+        _target = zeroValue;
+        _progressBar.fillAmount = zeroValue;
+
+        var scene = SceneManager.LoadSceneAsync(sceneName);
+        scene.allowSceneActivation = false;
+
+        _loaderCanvas.SetActive(true);
+
+        while (scene.progress < unityMaxLoad)
+        {
+            
+            _target = scene.progress;
+            _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / unityMaxLoad, 3 * Time.deltaTime);
+            yield return null;
+        }
+        Task.Delay(1000);
+        scene.allowSceneActivation = true;
+        _loaderCanvas.SetActive(false);
+    }
+
+
 
     // Update is called once per frame
-    void Update()
-    {
-        _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / 0.9f, 3 * Time.deltaTime);
-    }
+    // void Update()
+    // {
+    //     _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / unityMaxLoad, 3 * Time.deltaTime);
+    // }
 }
