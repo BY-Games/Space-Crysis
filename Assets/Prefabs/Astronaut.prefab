@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 547688022471435037}
   - component: {fileID: 547688022471435036}
   - component: {fileID: 547688022471435027}
+  - component: {fileID: 2476116709810000811}
   m_Layer: 0
   m_Name: Astronaut
   m_TagString: Player
@@ -250,3 +251,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.014473831, y: 0.6482688}
   m_Size: {x: 1.0420091, y: 1.4031326}
   m_Direction: 0
+--- !u!114 &2476116709810000811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547688022471435026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1f74ed81d80804c97f265ed8a06a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleState: {fileID: 9100000, guid: 2d0946100a320db40b8f1f91f06b9950, type: 2}
+  throwState: {fileID: 9100000, guid: 03075687610b08f4480ae024f9ba0002, type: 2}
+  winState: {fileID: 9100000, guid: ff0c38fd99f22184ab8cc3e9bd9dde6b, type: 2}
