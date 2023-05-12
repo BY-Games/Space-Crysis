@@ -4,21 +4,12 @@ using UnityEngine;
 
 public class WinAnnouncement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] GameObject announcement;
-    [SerializeField] private GameObject textGuide;
-    void Start()
-    {
-        announcement.gameObject.SetActive(false);
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "Player") {
-            announcement.gameObject.SetActive(true);
-            if (textGuide)
-            {
-                textGuide.gameObject.SetActive(false);
-            }
+        if(other.gameObject.CompareTag("Player")) {
+            // announcement.gameObject.SetActive(true);
+            GameManager.Instance.UpdateGameState(GameManager.GameState.Win);
         }
     }
 }

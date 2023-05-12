@@ -16,6 +16,7 @@ public class DragDemo : MonoBehaviour
     }
 
     private void GameManagerOnGameChange(GameManager.GameState state) {
+        Debug.Log("Check DragDemo state, current is " + state);
         if (state == GameManager.GameState.InGame) {
             Destroy(gameObject);
         }

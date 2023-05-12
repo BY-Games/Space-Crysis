@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelManager : MonoBehaviour
-{
+public class LevelManager : MonoBehaviour {
+    [SerializeField] private SceneAsset[] scenes;
+
+    private int currentSceneIndex = 0;
     // LoaderCanvas and ProgressBar are the display between the scenes.
     [SerializeField] private GameObject _loaderCanvas;
     [SerializeField] private Image _progressBar;
@@ -15,6 +18,7 @@ public class LevelManager : MonoBehaviour
     // Max value of scene loading progress is 0.9f
     private const float unityMaxLoad = 0.9f;
     private const float zeroValue = 0;
+    
     public static LevelManager Instance;
     private void Awake() {
         if(Instance == null) {
@@ -28,7 +32,6 @@ public class LevelManager : MonoBehaviour
     public async void LoadScene(string sceneName) {
         _target = zeroValue;
         _progressBar.fillAmount = zeroValue;
-
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
 
@@ -66,6 +69,32 @@ public class LevelManager : MonoBehaviour
         Task.Delay(1000);
         scene.allowSceneActivation = true;
         _loaderCanvas.SetActive(false);
+        Task.Delay(10000);
+        GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
+    }
+    
+    public IEnumerator LoadScenes()
+    {
+        _target = zeroValue;
+        _progressBar.fillAmount = zeroValue;
+
+        var scene = SceneManager.LoadSceneAsync(scenes[currentSceneIndex++ % scenes.Length].name);
+        scene.allowSceneActivation = false;
+
+        _loaderCanvas.SetActive(true);
+
+        while (scene.progress < unityMaxLoad)
+        {
+            
+            _target = scene.progress;
+            _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / unityMaxLoad, 3 * Time.deltaTime);
+            yield return null;
+        }
+        Task.Delay(1000);
+        scene.allowSceneActivation = true;
+        _loaderCanvas.SetActive(false);
+        Task.Delay(10000);
+        GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
     }
 
 

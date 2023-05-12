@@ -71,10 +71,10 @@ public class AstronautController : MonoBehaviour
                 // direction vector for throwing object
                 Vector3 throwDirection = (dragEnd - dragStart).normalized;
                 // add force to the throwing object (Distance of dragged arrow, direction and extra force by developer choice)
-                Vector3 TotalForce = throwDirection * dragDistance * dragMultiplier;
-                throwRb.AddForce(TotalForce, ForceMode2D.Impulse);
+                Vector3 totalForce = throwDirection * (dragDistance * dragMultiplier);
+                throwRb.AddForce(totalForce, ForceMode2D.Impulse);
                 // add the opposite throw for the astronaut
-                rb.AddForce(-TotalForce, ForceMode2D.Impulse);
+                rb.AddForce(-totalForce, ForceMode2D.Impulse);
 
                 throwCounter++;
                 counter = maxItemToThrow - throwCounter;

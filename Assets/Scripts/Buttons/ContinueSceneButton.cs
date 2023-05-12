@@ -6,6 +6,6 @@ public class ContinueSceneButton : MonoBehaviour
 {
     public void ChangeScene(string sceneName) {
         // LevelManager.Instance.LoadScene(sceneName);
-        StartCoroutine(LevelManager.Instance.LoadScenes(sceneName));
+        StartCoroutine(LevelManager.Instance.LoadScenes());
     }
 }
