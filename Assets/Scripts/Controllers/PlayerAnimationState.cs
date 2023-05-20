@@ -12,6 +12,10 @@ public class PlayerAnimationState : MonoBehaviour
         GameManager.OnGameStateChange += SetAnimationOnState;
     }
 
+    private void OnDestroy() {
+        GameManager.OnGameStateChange -= SetAnimationOnState;
+    }
+
     private void SetAnimationOnState(GameManager.GameState state) {
         if (state == GameManager.GameState.Win) {
             if (_playerAnim != null) {
