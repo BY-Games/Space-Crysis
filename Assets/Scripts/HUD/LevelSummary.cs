@@ -16,6 +16,7 @@ public class LevelSummary : MonoBehaviour {
         }
         GameManager.OnGameStateChange += ShowGameSummaryOnState;
     }
+    
 
     private void OnDestroy() {
         GameManager.OnGameStateChange -= ShowGameSummaryOnState;
