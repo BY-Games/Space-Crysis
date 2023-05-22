@@ -1,41 +1,50 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class PipeThrower : MonoBehaviour
-{
+public class PipeThrower : MonoBehaviour {
     public float throwForce = 3f;
     [SerializeReference] bool straight = true;
-    [SerializeField] Transform ExitPipe;
+    [SerializeReference] private bool firstEntrance;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+    [FormerlySerializedAs("ExitPipe")] [SerializeField]
+    Transform exitPipe;
+
+    [FormerlySerializedAs("SecondEntrance")] [SerializeField]
+    private Transform secondEntrance;
+
+    private void OnCollisionEnter2D(Collision2D collision) {
         // Check if the collision was with the astronaut
-        if (collision.gameObject.CompareTag("Player"))
-        {
+        if (collision.gameObject.CompareTag("Player")) {
             float impactStrength = collision.relativeVelocity.magnitude;
             // Debug.Log("Got Collision");
 
             // Calculate the throw direction and apply force to the astronaut
-            var position = ExitPipe.position;
-            Vector2 throwDirection;
+            var position = exitPipe.position;
+
             Debug.Log("Position vec" + position);
-            if (straight) {
-                throwDirection = position - transform.position; // use the pipe's right direction
+            Vector2 throwDirection;
+            if (firstEntrance) {
+                throwDirection = transform.position - secondEntrance.position; // use the pipe's right direction
             }
             else {
-                throwDirection = position; // use the pipe's right direction
-                throwDirection.x *= -1;
-                Debug.Log("Throw vec " + throwDirection);
+                throwDirection = secondEntrance.position - transform.position; // use the pipe's right direction
             }
+
+            Debug.Log("Throw vec " + throwDirection);
+
             Debug.Log("Before change pos" + collision.gameObject.transform.position);
             collision.gameObject.transform.position = position; // Teleport to other side of pipe
-            // collision.gameObject.transform.position.x *= -1;
             Debug.Log("Before AFTER pos" + collision.gameObject.transform.position);
+            if (!straight) {
+                throwDirection = Vector2.Perpendicular(throwDirection);
+            }
 
-            // Debug.Log("Direction Vector " + throwDirection);
-            
+            Debug.Log("Direction Vector " + throwDirection);
+
             // Force applied on player when exit the pipe
-            Vector3 exitPipeForce = throwDirection;
+            Vector3 exitPipeForce = throwDirection * throwForce * impactStrength;
+            Debug.Log("Direction Vector " + exitPipeForce);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(exitPipeForce, ForceMode2D.Impulse);
         }
-    }   
+    }
 }
