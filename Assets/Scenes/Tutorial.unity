@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large Pipe-Straight
       objectReference: {fileID: 0}
+    - target: {fileID: 2505104868114128719, guid: 354e56a65bd99f240901c3b4da43779e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2505104868257553814, guid: 354e56a65bd99f240901c3b4da43779e, type: 3}
       propertyPath: straight
       value: 1
