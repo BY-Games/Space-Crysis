@@ -49,29 +49,29 @@ public class LevelManager : MonoBehaviour {
 
     }
     
-    public IEnumerator LoadScenes(string sceneName)
-    {
-        _target = zeroValue;
-        _progressBar.fillAmount = zeroValue;
-
-        var scene = SceneManager.LoadSceneAsync(sceneName);
-        scene.allowSceneActivation = false;
-
-        _loaderCanvas.SetActive(true);
-
-        while (scene.progress < unityMaxLoad)
-        {
-            
-            _target = scene.progress;
-            _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / unityMaxLoad, 3 * Time.deltaTime);
-            yield return null;
-        }
-        Task.Delay(1000);
-        scene.allowSceneActivation = true;
-        _loaderCanvas.SetActive(false);
-        Task.Delay(10000);
-        GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
-    }
+    // public IEnumerator LoadScenes(string sceneName)
+    // {
+    //     _target = zeroValue;
+    //     _progressBar.fillAmount = zeroValue;
+    //
+    //     var scene = SceneManager.LoadSceneAsync(sceneName);
+    //     scene.allowSceneActivation = false;
+    //
+    //     _loaderCanvas.SetActive(true);
+    //
+    //     while (scene.progress < unityMaxLoad)
+    //     {
+    //         
+    //         _target = scene.progress;
+    //         _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / unityMaxLoad, 3 * Time.deltaTime);
+    //         yield return null;
+    //     }
+    //     Task.Delay(1000);
+    //     scene.allowSceneActivation = true;
+    //     _loaderCanvas.SetActive(false);
+    //     Task.Delay(10000);
+    //     GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
+    // }
     
     public IEnumerator LoadScenes()
     {
