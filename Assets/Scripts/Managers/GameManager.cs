@@ -1,9 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    // Singleton Instance
     public static GameManager Instance;
 
     public GameState state;
@@ -12,16 +11,12 @@ public class GameManager : MonoBehaviour {
     private void Awake() {
         if (Instance == null) {
             Instance = this;
+            // Keep the component alive as long the program is active.
             DontDestroyOnLoad(gameObject);
         }
         else {
             Destroy(gameObject);
         }
-    }
-
-    // Start is called before the first frame update
-    private void Start() {
-        UpdateGameState(GameState.Tutorial);
     }
 
     public void UpdateGameState(GameState newState) {

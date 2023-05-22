@@ -10,6 +10,8 @@ public class LevelManager : MonoBehaviour {
     [SerializeField] private SceneAsset[] scenes;
 
     private int currentSceneIndex = 0;
+    
+    
     // LoaderCanvas and ProgressBar are the display between the scenes.
     [SerializeField] private GameObject _loaderCanvas;
     [SerializeField] private Image _progressBar;
@@ -29,26 +31,6 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
-    public async void LoadScene(string sceneName) {
-        _target = zeroValue;
-        _progressBar.fillAmount = zeroValue;
-        var scene = SceneManager.LoadSceneAsync(sceneName);
-        scene.allowSceneActivation = false;
-
-        _loaderCanvas.SetActive(true);
-        do
-        {
-            await Task.Delay(100);
-            _target = scene.progress;
-        } while (scene.progress < unityMaxLoad);
-        await Task.Delay(1000); // need to DISCARD
-        // Loading complete we can activate the next scene.
-        scene.allowSceneActivation = true;
-        // No need anymnore for loader canvas to be shown.
-        _loaderCanvas.SetActive(false);
-
-    }
-    
     // public IEnumerator LoadScenes(string sceneName)
     // {
     //     _target = zeroValue;
@@ -77,10 +59,11 @@ public class LevelManager : MonoBehaviour {
     {
         _target = zeroValue;
         _progressBar.fillAmount = zeroValue;
-
+        
+        // Critical
         var scene = SceneManager.LoadSceneAsync(scenes[currentSceneIndex++ % scenes.Length].name);
+        
         scene.allowSceneActivation = false;
-
         _loaderCanvas.SetActive(true);
 
         while (scene.progress < unityMaxLoad)
@@ -94,6 +77,8 @@ public class LevelManager : MonoBehaviour {
         scene.allowSceneActivation = true;
         _loaderCanvas.SetActive(false);
         Task.Delay(10000);
+        
+        // Critical
         GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
     }
 
