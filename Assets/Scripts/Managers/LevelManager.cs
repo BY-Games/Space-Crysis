@@ -84,6 +84,43 @@ public class LevelManager : MonoBehaviour {
 
 
 
+    // new by yossi
+    //todo
+    public void LoadScene(int sceneIndex)
+    {
+        StartCoroutine(LoadScenes(sceneIndex));
+    }
+
+
+    //todo
+    // new by yossi
+    public IEnumerator LoadScenes(int sceneIndex)
+    {
+        _target = zeroValue;
+        _progressBar.fillAmount = zeroValue;
+
+        var scene = SceneManager.LoadSceneAsync(sceneIndex);
+        scene.allowSceneActivation = false;
+
+        _loaderCanvas.SetActive(true);
+
+        while (scene.progress < unityMaxLoad)
+        {
+            _target = scene.progress;
+            _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / unityMaxLoad, 3 * Time.deltaTime);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1);
+        scene.allowSceneActivation = true;
+        _loaderCanvas.SetActive(false);
+
+        yield return new WaitForSeconds(10);
+
+        GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
+    }
+
+
     // Update is called once per frame
     // void Update()
     // {
