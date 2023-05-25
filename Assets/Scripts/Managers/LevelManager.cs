@@ -59,10 +59,11 @@ public class LevelManager : MonoBehaviour {
     {
         _target = zeroValue;
         _progressBar.fillAmount = zeroValue;
-        
+
         // Critical
         var scene = SceneManager.LoadSceneAsync(scenes[currentSceneIndex++ % scenes.Length].name);
-        
+
+
         scene.allowSceneActivation = false;
         _loaderCanvas.SetActive(true);
 
@@ -120,6 +121,10 @@ public class LevelManager : MonoBehaviour {
         GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
     }
 
+    public void ResetCurrentSceneIndex()
+    {
+        currentSceneIndex = 0;
+    }
 
     // Update is called once per frame
     // void Update()
