@@ -1064,30 +1064,6 @@ MonoBehaviour:
           m_StringArgument: Tutorial
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 818950311}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 1
-      - m_Target: {fileID: 818950311}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
 --- !u!114 &568026614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,11 +1106,6 @@ CanvasRenderer:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6190449806994339474, guid: 958a6adc3b9f36d48b318c18c19d4ca7, type: 3}
   m_PrefabInstance: {fileID: 1195509528}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &818950311 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5671403972130496068, guid: b2c126898b0fdc04ca7a869817d73071, type: 3}
-  m_PrefabInstance: {fileID: 5671403971864182459}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &855575513
 GameObject:
