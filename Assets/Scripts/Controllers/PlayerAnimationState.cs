@@ -1,8 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -26,9 +21,9 @@ public class PlayerAnimationState : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    [FormerlySerializedAs("_idleState")] [SerializeField] private AnimatorController idleState;
-    [SerializeField] private AnimatorController throwState;
-    [SerializeField] private AnimatorController winState;
+    [FormerlySerializedAs("_idleState")] [SerializeField] private RuntimeAnimatorController idleState;
+    [SerializeField] private RuntimeAnimatorController throwState;
+    [SerializeField] private RuntimeAnimatorController winState;
     private Animator _playerAnim;
     void Start() {
         _playerAnim = gameObject.GetComponent<Animator>();

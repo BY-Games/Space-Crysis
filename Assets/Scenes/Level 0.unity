@@ -1733,6 +1733,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1765753661459250067, guid: 8a6c66731e5b57e4bbcf82d4de4eae13, type: 3}
+      propertyPath: m_text
+      value: x 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7149530237821880227, guid: 8a6c66731e5b57e4bbcf82d4de4eae13, type: 3}
       propertyPath: origin
       value: 
@@ -2137,6 +2141,10 @@ PrefabInstance:
       propertyPath: throwsLeft
       value: 
       objectReference: {fileID: 1531322814}
+    - target: {fileID: 547688022471435039, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
+      propertyPath: maxItemToThrow
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
 --- !u!4 &1902310147 stripped

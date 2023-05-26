@@ -1,13 +1,14 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using UnityEditor;
+// using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
-    [SerializeField] private SceneAsset[] scenes;
+    // [SerializeField] private SceneAsset[] scenes;
+    [SerializeField] private String[] sceneNames;
 
     private int currentSceneIndex = 0;
     
@@ -61,7 +62,7 @@ public class LevelManager : MonoBehaviour {
         _progressBar.fillAmount = zeroValue;
         
         // Critical
-        var scene = SceneManager.LoadSceneAsync(scenes[currentSceneIndex++ % scenes.Length].name);
+        var scene = SceneManager.LoadSceneAsync(sceneNames[currentSceneIndex++ % sceneNames.Length]);
         
         scene.allowSceneActivation = false;
         _loaderCanvas.SetActive(true);
