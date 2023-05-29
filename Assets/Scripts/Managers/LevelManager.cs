@@ -58,6 +58,12 @@ public class LevelManager : MonoBehaviour {
     
     public IEnumerator LoadScenes()
     {
+
+
+        //this is for work only delte after work 
+        currentSceneIndex = 6;
+        //////////////////////////////
+
         _target = zeroValue;
         _progressBar.fillAmount = zeroValue;
 
@@ -85,16 +91,14 @@ public class LevelManager : MonoBehaviour {
 
 
 
-    // new by yossi
-    //todo
+    
     public void LoadScene(int sceneIndex)
     {
         StartCoroutine(LoadScenes(sceneIndex));
     }
 
 
-    //todo
-    // new by yossi
+  
     public IEnumerator LoadScenes(int sceneIndex)
     {
         _target = zeroValue;

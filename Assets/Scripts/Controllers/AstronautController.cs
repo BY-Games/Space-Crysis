@@ -2,7 +2,8 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class AstronautController : MonoBehaviour {
+public class AstronautController : MonoBehaviour
+{
     public GameObject throwObject;
 
     // public float maxDragDistance = 5f;
@@ -28,7 +29,8 @@ public class AstronautController : MonoBehaviour {
     private int throwCounter = 0;
     private int counter;
 
-    void Start() {
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         rb.drag = linearDrag;
         rb.angularDrag = angularDrag;
@@ -36,16 +38,20 @@ public class AstronautController : MonoBehaviour {
         gameOver.SetActive(false);
     }
 
-    void Update() {
-        if (throwCounter < maxItemToThrow) {
-            if (Input.GetMouseButtonDown(0)) {
+    void Update()
+    {
+        if (throwCounter < maxItemToThrow)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
                 // Get the astronaut center position from the collider
                 dragStart = gameObject.GetComponent<Collider2D>().bounds.center;
                 // Set to dragging mode - ON
                 isDragging = true;
                 dragDistance = 0f;
             }
-            else if (Input.GetMouseButton(0) && isDragging) {
+            else if (Input.GetMouseButton(0) && isDragging)
+            {
                 // get mouse position in every frame of holding mouse down.
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = 0;
@@ -55,7 +61,8 @@ public class AstronautController : MonoBehaviour {
                 Vector3 dragArrowBody = (mousePosition - dragStart).normalized * dragDistance;
                 dragEnd = dragStart + dragArrowBody;
             }
-            else if (Input.GetMouseButtonUp(0) && isDragging) {
+            else if (Input.GetMouseButtonUp(0) && isDragging)
+            {
                 isDragging = false;
                 GameObject throwObj = Instantiate(throwObject, transform.position, Quaternion.identity);
                 // get the rigidbody of object to throw 
@@ -71,6 +78,7 @@ public class AstronautController : MonoBehaviour {
                 throwCounter++;
                 counter = maxItemToThrow - throwCounter;
 
+                /// need to fix not see all
                 throwsLeft.GetComponent<TMP_Text>().text = "x " + counter.ToString();
             }
         }
@@ -81,15 +89,22 @@ public class AstronautController : MonoBehaviour {
         //     }
         // } // Check if player is not moving 
 
-        else if (Mathf.Abs(rb.velocity.x) < 0.01f && Mathf.Abs(rb.velocity.y) < 0.01f && playerActive) {
+        else if (Mathf.Abs(rb.velocity.x) < 0.01f && Mathf.Abs(rb.velocity.y) < 0.01f && playerActive)
+        {
             Debug.Log("no more tool");
-            if (GameManager.Instance.state is not GameManager.GameState.Win) {
+            if (GameManager.Instance.state is not GameManager.GameState.Win)
+            {
                 GameManager.Instance.UpdateGameState(GameManager.GameState.OutOfTools);
             }
+
 
             // gameOver.SetActive(false);
             playerActive = false;
             // gameOver.SetActive(true);
         }
+        
+       
+
     }
 }
+

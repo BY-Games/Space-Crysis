@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.Serialization;
+using System.Collections;
 
 public class PlayerAnimationState : MonoBehaviour
 {
+   
+
     private void Awake() {
         GameManager.OnGameStateChange += SetAnimationOnState;
     }
@@ -11,6 +14,7 @@ public class PlayerAnimationState : MonoBehaviour
         GameManager.OnGameStateChange -= SetAnimationOnState;
     }
 
+
     private void SetAnimationOnState(GameManager.GameState state) {
         if (state == GameManager.GameState.Win) {
             if (_playerAnim != null) {
@@ -18,12 +22,26 @@ public class PlayerAnimationState : MonoBehaviour
             }
             _playerAnim.runtimeAnimatorController = winState;
         }
+
+        else if (state == GameManager.GameState.Eliminated)
+        {
+            if (_playerAnim != null)
+            {
+                _playerAnim.enabled = true;
+            }
+            _playerAnim.runtimeAnimatorController = eliminatedState;
+
+        }
     }
+    
 
     // Start is called before the first frame update
     [FormerlySerializedAs("_idleState")] [SerializeField] private RuntimeAnimatorController idleState;
     [SerializeField] private RuntimeAnimatorController throwState;
     [SerializeField] private RuntimeAnimatorController winState;
+    [SerializeField] private RuntimeAnimatorController eliminatedState;
+
+
     private Animator _playerAnim;
     void Start() {
         _playerAnim = gameObject.GetComponent<Animator>();

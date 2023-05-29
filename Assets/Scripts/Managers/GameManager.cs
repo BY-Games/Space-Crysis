@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour {
             case GameState.OutOfTools:
                 break;
             case GameState.Eliminated:
+            
                 break;
             case GameState.Win:
                 break;
