@@ -153,7 +153,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.0568185, y: 0.0088098645}
+  m_Offset: {x: -6.27178, y: 0.0088098645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -164,7 +164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.1449194, y: 0.45379305}
+  m_Size: {x: 3.7149963, y: 0.45379305}
   m_EdgeRadius: 0
 --- !u!4 &7302687
 Transform:
@@ -1872,7 +1872,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2505104868114128714, guid: 354e56a65bd99f240901c3b4da43779e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2505104868114128714, guid: 354e56a65bd99f240901c3b4da43779e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1969,7 +1969,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2505104868114128714, guid: 354e56a65bd99f240901c3b4da43779e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2505104868114128714, guid: 354e56a65bd99f240901c3b4da43779e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2397,8 +2397,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 14544332}
   - {fileID: 307887876}
+  - {fileID: 14544332}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3408,7 +3408,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.0568185, y: 0.0088098645}
+  m_Offset: {x: -5.651724, y: 0.0088098645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3419,7 +3419,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.1449194, y: 0.45379305}
+  m_Size: {x: 7.33473, y: 0.45379305}
   m_EdgeRadius: 0
 --- !u!4 &1952321579
 Transform:
