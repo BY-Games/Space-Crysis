@@ -962,23 +962,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &687161142 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6016556237158289880, guid: 2e5ac2fdeed117144b2977f9e5917890, type: 3}
-  m_PrefabInstance: {fileID: 9170297209810940681}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &687161145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687161142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4cc63e0fcd165843bc95af6acef79aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &733422799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,7 +2072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1950556738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2696,13 +2679,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7173467263258503079, guid: 2e5ac2fdeed117144b2977f9e5917890, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9170297208719340604, guid: 2e5ac2fdeed117144b2977f9e5917890, type: 3}
       propertyPath: m_Name
       value: PedSwitch
       objectReference: {fileID: 0}
     - target: {fileID: 9170297208719340604, guid: 2e5ac2fdeed117144b2977f9e5917890, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9170297208719340607, guid: 2e5ac2fdeed117144b2977f9e5917890, type: 3}
       propertyPath: m_RootOrder

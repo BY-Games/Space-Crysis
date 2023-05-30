@@ -11,8 +11,9 @@ public class Switch : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            gameObject.SetActive(false);
             greenSwitch.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+            
         }
     }
 }
