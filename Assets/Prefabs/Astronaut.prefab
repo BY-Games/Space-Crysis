@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 547688022471435036}
   - component: {fileID: 547688022471435027}
   - component: {fileID: 2476116709810000811}
-  - component: {fileID: -2142511891522560553}
   m_Layer: 0
   m_Name: Astronaut
   m_TagString: Player
@@ -268,15 +267,3 @@ MonoBehaviour:
   throwState: {fileID: 9100000, guid: 03075687610b08f4480ae024f9ba0002, type: 2}
   winState: {fileID: 9100000, guid: ff0c38fd99f22184ab8cc3e9bd9dde6b, type: 2}
   eliminatedState: {fileID: 9100000, guid: 726cf3e285fb211428da8e8a5b6034d2, type: 2}
---- !u!114 &-2142511891522560553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547688022471435026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2efed1ae67eb57842ab6d03730d16348, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

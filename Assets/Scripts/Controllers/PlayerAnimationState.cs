@@ -30,10 +30,18 @@ public class PlayerAnimationState : MonoBehaviour
                 _playerAnim.enabled = true;
             }
             _playerAnim.runtimeAnimatorController = eliminatedState;
+            StartCoroutine(WaitAndDeactivate());
 
         }
     }
-    
+
+    private IEnumerator WaitAndDeactivate()
+    {
+        yield return new WaitForSeconds(1f);
+
+        gameObject.SetActive(false);
+    }
+
 
     // Start is called before the first frame update
     [FormerlySerializedAs("_idleState")] [SerializeField] private RuntimeAnimatorController idleState;

@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviour {
 
 
         //this is for work only delte after work 
-        currentSceneIndex = 6;
+        //currentSceneIndex = 0;
         //////////////////////////////
 
         _target = zeroValue;
