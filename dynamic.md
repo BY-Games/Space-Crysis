@@ -11,6 +11,9 @@
 2.כל זריקה מפעילה כח שמניף את השחקן לצד הנגדי.
 
 3.כח נוסף שמופעל על הזריקה בהתאם לתנאי השלב.
+![Alt text](Assets/Images/toolsss.jpg)
+![Alt text](Assets/Images/tools.jpg)
+
 
 ## עזרים במפה - Portal ,FAN ,Pipe 
 ![Alt text](Assets/Images/pipe.jpg)
