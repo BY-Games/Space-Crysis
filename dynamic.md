@@ -14,14 +14,17 @@
 
 ## עזרים במפה - Portal ,FAN ,Pipe 
 ![Alt text](Assets/Images/pipe.jpg)
+
 **מאפיינים:**
 
 
 
 כח שמופעל על כל אחד מהעזרים בכדי לקדם את השחקן במרחב.
 
-מכשולים
+**מכשולים**
+
 ![Alt text](Assets/Images/saw.jpg)
+
 ![Alt text](Assets/Images/lightbolt.jpg)
 אוייבים
 
@@ -70,6 +73,7 @@
 5.אובייקט היעד.
 
 ![Alt text](Assets/Images/destination.jpg)
+
 **נקודת מבט: Sideview .**
 
 **בחרנו בנקודת מבט זו כדי לאפשר לשחקן לקבל מידע באופן מלא
