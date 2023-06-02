@@ -2,44 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightningBolt : MonoBehaviour
-{
-    [SerializeField] GameObject lightningBolt;
-  
-    [SerializeField] float timeOfBreak; 
-    bool boltAvtive;
+public class LightningBolt : MonoBehaviour {
+    [SerializeField] GameObject[] firstGroupLightningBolt;
+    [SerializeField] GameObject[] secondGroupLightningBolt;
+
+
+    [SerializeField] float timeOfBreak;
+
+    bool boltActive;
+
     // Start is called before the first frame update
-    void Start()
-    {
-        boltAvtive = true;
+    void Start() {
+        boltActive = true;
         StartCoroutine(LightBoltBreaks());
     }
 
-   
 
-    public IEnumerator LightBoltBreaks()
-    {
+    public IEnumerator LightBoltBreaks() {
+        while (true) {
+            if (boltActive) {
+                foreach (GameObject lightningBolt in firstGroupLightningBolt) {
+                    lightningBolt.SetActive(true);
+                }
 
-        while (true)
-        {
-            if (boltAvtive)
-            {
-                lightningBolt.SetActive(true);
-             
-                boltAvtive = false;
+                foreach (GameObject lightningBolt in secondGroupLightningBolt) {
+                    lightningBolt.SetActive(false);
+                }
+
+                boltActive = false;
             }
-            else
-            {
-                lightningBolt.SetActive(false);
-        
+            else {
+                foreach (GameObject lightningBolt in secondGroupLightningBolt) {
+                    lightningBolt.SetActive(true);
+                }
 
-                boltAvtive = true;
+                foreach (GameObject lightningBolt in firstGroupLightningBolt) {
+                    lightningBolt.SetActive(false);
+                }
+
+
+                boltActive = true;
             }
 
             yield return new WaitForSeconds(timeOfBreak);
         }
-
-      
     }
-
 }
