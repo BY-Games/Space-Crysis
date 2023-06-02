@@ -660,6 +660,10 @@ PrefabInstance:
       propertyPath: origin
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 614251173518246948, guid: 0b0029fba80deb74b8b880f912cf2eb3, type: 3}
+      propertyPath: maxDragDistance
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 614251173518246949, guid: 0b0029fba80deb74b8b880f912cf2eb3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -1708,6 +1708,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 547688022471435032, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
   m_PrefabInstance: {fileID: 1162588765}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1162588767 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6193287321354194100, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
+  m_PrefabInstance: {fileID: 1162588765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1203481059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,6 +2579,10 @@ PrefabInstance:
       propertyPath: origin
       value: 
       objectReference: {fileID: 1162588766}
+    - target: {fileID: 7149530237821880227, guid: 8a6c66731e5b57e4bbcf82d4de4eae13, type: 3}
+      propertyPath: throwBoundariesCircle
+      value: 
+      objectReference: {fileID: 1162588767}
     - target: {fileID: 7762909240351924010, guid: 8a6c66731e5b57e4bbcf82d4de4eae13, type: 3}
       propertyPath: m_IsActive
       value: 0
