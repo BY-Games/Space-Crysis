@@ -5,11 +5,11 @@ using UnityEngine;
 public class sawMove : MonoBehaviour
 {
 
-    [SerializeField] float speed;
+    [SerializeField] float speed =0.5f;
 
-     Vector3 originalPosition;
+    Vector3 originalPosition;
 
-    bool moveRIght = true;
+    bool moveRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,19 +21,23 @@ public class sawMove : MonoBehaviour
     void Update()
     {
 
-        if (moveRIght)
+        if (moveRight)
         {
-            transform.position = new Vector3(transform.position.x + Time.deltaTime, transform.position.y, transform.position.z);
-            if (transform.position.x >= 0 ) {
-            moveRIght=false;    
+            transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
+            if (transform.position.x >= 0)
+            {
+                moveRight = false;
             }
         }
         else
         {
-            transform.position = new Vector3(-1* (transform.position.x + Time.deltaTime), transform.position.y, transform.position.z);
-            if (transform.position.x  == originalPosition.x)
+
+            transform.position = new Vector3(((transform.position.x) - speed * Time.deltaTime), transform.position.y, transform.position.z);
+            Debug.Log(transform.position);
+
+            if (transform.position.x <= originalPosition.x)
             {
-                moveRIght = true;
+                moveRight = true;
             }
         }
     }

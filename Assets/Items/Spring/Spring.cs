@@ -65,7 +65,7 @@ public class Spring : MonoBehaviour
 
     }
 
-    public float forceMagnitude = 10f;
+    public float forceMagnitude = 15f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -87,7 +87,7 @@ public class Spring : MonoBehaviour
         if (JumpInputActive)
         {
        //    Vector3 totalForce = throwDirection * (dragDistance * dragMultiplier);
-            Vector2 forceDirection = transform.up; // You can adjust this to the desired force direction
+            Vector2 forceDirection = transform.up; 
             otherRigidbody.AddForce(forceDirection * forceMagnitude, ForceMode2D.Impulse);
            
         }
