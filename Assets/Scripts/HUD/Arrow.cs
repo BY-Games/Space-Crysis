@@ -5,12 +5,11 @@ namespace Kalkatos.DottedArrow {
         [SerializeField] private float maxDragDistance = 3.5f;
         [SerializeField] private SpriteRenderer throwBoundariesCircle;
         private float dragDistance = 0f;
+
         public Transform Origin {
             get { return origin; }
             set { origin = value; }
         }
-        
-        [SerializeField] private GameObject throwBoundaries;
 
         [SerializeField] private float baseHeight;
         [SerializeField] private RectTransform baseRect;
@@ -57,15 +56,15 @@ namespace Kalkatos.DottedArrow {
             differenceToMouse = (endDragPoint - (Vector3)originPosOnScreen);
             // Debug.Log("Diff Vector + " + differenceToMouse);
 
-            
+
             dragDistance = Mathf.Min(Vector3.Distance(endDragPoint, originPosOnScreen), maxDragDistance);
             var color = throwBoundariesCircle.color;
-            color = new Color(color.r, color.g, color.b,  dragDistance / (maxDragDistance * 16));
+            color = new Color(color.r, color.g, color.b, dragDistance / (maxDragDistance * 16));
             throwBoundariesCircle.color = color;
 
             // Debug.Log("The Drag Distance is => " + dragDistance);
             differenceToMouse = differenceToMouse.normalized * dragDistance;
-            
+
             // ----------------------------------------------
             differenceToMouse.Scale(new Vector2(1f / myRect.localScale.x, 1f / myRect.localScale.y));
             transform.up = differenceToMouse;
@@ -85,7 +84,7 @@ namespace Kalkatos.DottedArrow {
         public void Deactivate() {
             SetActive(false);
             var color = throwBoundariesCircle.color;
-            throwBoundariesCircle.color = new Color(color.r, color.g, color.b,  0f);
+            throwBoundariesCircle.color = new Color(color.r, color.g, color.b, 0f);
         }
 
         public void SetupAndActivate(Transform origin) {
