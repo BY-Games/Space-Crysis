@@ -135,7 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwObject: {fileID: 8968012946453357171, guid: ca3c3d9bb8000ec459b3ddee3b87dcbe, type: 3}
-  dragMultiplier: 5
+  maxDragDistance: 3.5
+  dragMultiplier: 15
   linearDrag: 0.6
   angularDrag: 0.4
   maxItemToThrow: 3

@@ -2,10 +2,14 @@ using UnityEngine;
 
 namespace Kalkatos.DottedArrow {
     public class Arrow : MonoBehaviour {
+        [SerializeField] private float maxDragDistance = 3.5f;
+        private float dragDistance;
         public Transform Origin {
             get { return origin; }
             set { origin = value; }
         }
+        
+        [SerializeField] private GameObject throwBoundaries;
 
         [SerializeField] private float baseHeight;
         [SerializeField] private RectTransform baseRect;
@@ -47,12 +51,17 @@ namespace Kalkatos.DottedArrow {
                 new Vector2(originPosOnScreen.x - Screen.width / 2, originPosOnScreen.y - Screen.height / 2) /
                 canvas.scaleFactor;
             endDragPoint = Input.mousePosition;
-            // endDragPoint.x %= 2;
-            // endDragPoint.y %= 2;
-            // endDragPoint.z %= 2;
-            Debug.Log("End drag Vector " + endDragPoint);
-            differenceToMouse = (endDragPoint - (Vector3)originPosOnScreen) ;
-            Debug.Log("Diff Vector + " + differenceToMouse);
+            // -----------------------------------------
+            // Debug.Log("End drag Vector " + endDragPoint);
+            differenceToMouse = (endDragPoint - (Vector3)originPosOnScreen);
+            // Debug.Log("Diff Vector + " + differenceToMouse);
+
+            
+            dragDistance = Mathf.Min(Vector3.Distance(endDragPoint, originPosOnScreen), maxDragDistance);
+            // Debug.Log("The Drag Distance is => " + dragDistance);
+            differenceToMouse = differenceToMouse.normalized * dragDistance;
+            
+            // ----------------------------------------------
             differenceToMouse.Scale(new Vector2(1f / myRect.localScale.x, 1f / myRect.localScale.y));
             transform.up = differenceToMouse;
             baseRect.anchorMax = new Vector2(baseRect.anchorMax.x,

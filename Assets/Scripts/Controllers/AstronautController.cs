@@ -6,7 +6,7 @@ public class AstronautController : MonoBehaviour
 {
     public GameObject throwObject;
 
-    // public float maxDragDistance = 5f;
+    public float maxDragDistance = 300f;
     [SerializeField] float dragMultiplier = 5f;
     [SerializeField] float linearDrag = 0.1f;
     [SerializeField] float angularDrag = 0.1f;
@@ -57,7 +57,8 @@ public class AstronautController : MonoBehaviour
                 mousePosition.z = 0;
 
                 // calculate distance from astrunaut to current point when releasing mouse press
-                dragDistance = Vector3.Distance(mousePosition, dragStart);
+                dragDistance = Mathf.Min(Vector3.Distance(mousePosition, dragStart), maxDragDistance);
+                Debug.Log("The Min Drag Distance is = " + dragDistance);
                 Vector3 dragArrowBody = (mousePosition - dragStart).normalized * dragDistance;
                 dragEnd = dragStart + dragArrowBody;
             }
@@ -82,12 +83,7 @@ public class AstronautController : MonoBehaviour
                 throwsLeft.GetComponent<TMP_Text>().text = "x " + counter.ToString();
             }
         }
-        // // player throw more then he can.
-        // else if (gameOver != null) {
-        //     if (guide != null) {
-        //         guide.SetActive(false);
-        //     }
-        // } // Check if player is not moving 
+ 
 
         else if (Mathf.Abs(rb.velocity.x) < 0.01f && Mathf.Abs(rb.velocity.y) < 0.01f && playerActive)
         {
