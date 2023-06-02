@@ -3,7 +3,8 @@ using UnityEngine;
 namespace Kalkatos.DottedArrow {
     public class Arrow : MonoBehaviour {
         [SerializeField] private float maxDragDistance = 3.5f;
-        private float dragDistance;
+        [SerializeField] private SpriteRenderer throwBoundariesCircle;
+        private float dragDistance = 0f;
         public Transform Origin {
             get { return origin; }
             set { origin = value; }
@@ -58,6 +59,10 @@ namespace Kalkatos.DottedArrow {
 
             
             dragDistance = Mathf.Min(Vector3.Distance(endDragPoint, originPosOnScreen), maxDragDistance);
+            var color = throwBoundariesCircle.color;
+            color = new Color(color.r, color.g, color.b,  dragDistance / (maxDragDistance * 16));
+            throwBoundariesCircle.color = color;
+
             // Debug.Log("The Drag Distance is => " + dragDistance);
             differenceToMouse = differenceToMouse.normalized * dragDistance;
             
@@ -79,16 +84,8 @@ namespace Kalkatos.DottedArrow {
 
         public void Deactivate() {
             SetActive(false);
-            // Debug.Log("Happened");
-            // AstronautController originController = origin.gameObject.GetComponent<AstronautController>();
-            // Rigidbody2D rb = origin.gameObject.GetComponent<Rigidbody2D>();
-
-            // GameObject throwObj = Instantiate(originController.throwObject, origin.position, Quaternion.identity);
-            // Rigidbody2D throwRb = throwObj.GetComponent<Rigidbody2D>();
-            // Vector3 throwDirection = differenceToMouse.normalized;
-            // float dragDistance = Vector3.Distance(endDragPoint, (Vector3)originPosOnScreen);
-            // throwRb.AddForce(throwDirection * dragDistance * 5, ForceMode2D.Impulse);
-            // rb.AddForce(-throwDirection * dragDistance * 5, ForceMode2D.Impulse);
+            var color = throwBoundariesCircle.color;
+            throwBoundariesCircle.color = new Color(color.r, color.g, color.b,  0f);
         }
 
         public void SetupAndActivate(Transform origin) {
