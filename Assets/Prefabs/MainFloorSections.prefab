@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4819209474139156208}
   - component: {fileID: 4819209474139156211}
   - component: {fileID: 4756947516257434268}
+  - component: {fileID: 6804706544446253843}
   m_Layer: 0
   m_Name: MainFloorSections
   m_TagString: Untagged
@@ -111,3 +112,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 1.9456408}
   m_EdgeRadius: 0
+--- !u!50 &6804706544446253843
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819209474139156209}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000
+  m_LinearDrag: 0
+  m_AngularDrag: 1000000
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

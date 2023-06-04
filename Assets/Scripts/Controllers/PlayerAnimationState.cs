@@ -2,10 +2,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using System.Collections;
 
-public class PlayerAnimationState : MonoBehaviour
-{
-   
-
+public class PlayerAnimationState : MonoBehaviour {
     private void Awake() {
         GameManager.OnGameStateChange += SetAnimationOnState;
     }
@@ -20,23 +17,23 @@ public class PlayerAnimationState : MonoBehaviour
             if (_playerAnim != null) {
                 _playerAnim.enabled = true;
             }
+
             _playerAnim.runtimeAnimatorController = winState;
         }
 
-        else if (state == GameManager.GameState.Eliminated)
-        {
-            if (_playerAnim != null)
-            {
-                _playerAnim.enabled = true;
-            }
-            _playerAnim.runtimeAnimatorController = eliminatedState;
-            StartCoroutine(WaitAndDeactivate());
+        else if (state == GameManager.GameState.Eliminated) {
+            if (gameObject != null) {
+                if (_playerAnim != null) {
+                    _playerAnim.enabled = true;
+                }
 
+                _playerAnim.runtimeAnimatorController = eliminatedState;
+                StartCoroutine(WaitAndDeactivate());
+            }
         }
     }
 
-    private IEnumerator WaitAndDeactivate()
-    {
+    private IEnumerator WaitAndDeactivate() {
         yield return new WaitForSeconds(1f);
 
         gameObject.SetActive(false);
@@ -44,21 +41,21 @@ public class PlayerAnimationState : MonoBehaviour
 
 
     // Start is called before the first frame update
-    [FormerlySerializedAs("_idleState")] [SerializeField] private RuntimeAnimatorController idleState;
+    [FormerlySerializedAs("_idleState")] [SerializeField]
+    private RuntimeAnimatorController idleState;
+
     [SerializeField] private RuntimeAnimatorController throwState;
     [SerializeField] private RuntimeAnimatorController winState;
     [SerializeField] private RuntimeAnimatorController eliminatedState;
 
 
     private Animator _playerAnim;
+
     void Start() {
         _playerAnim = gameObject.GetComponent<Animator>();
         // _playerAnim.runtimeAnimatorController = idleState;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() { }
 }
