@@ -21,10 +21,10 @@ public class BlackHoleEffect : MonoBehaviour {
         Vector3 directionToBlackHole = transform.position - other.transform.position;
 
         // Calculate the rotation axis perpendicular to the direction
-        Vector3 rotationAxis = Vector3.Cross(directionToBlackHole.normalized, Vector3.up);
+        // Vector3 rotationAxis = Vector3.Cross(directionToBlackHole.normalized, Vector3.up);
 
         // Rotate the object around the rotation axis
-        other.transform.Rotate(rotationAxis, rotateSpeed * Time.fixedDeltaTime, Space.World);
+        other.transform.Rotate(0, 0, rotateSpeed * Time.fixedDeltaTime);
 
         // Check if the object has shrunk to a small enough size
         if (newScale.x <= 0.1f) {

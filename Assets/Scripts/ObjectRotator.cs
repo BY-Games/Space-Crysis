@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class PipeRotator : MonoBehaviour {
+public class ObjectRotator : MonoBehaviour {
     [FormerlySerializedAs("directionUp")] [SerializeReference] private bool directionRight;
 
     [SerializeField] private float speed;
