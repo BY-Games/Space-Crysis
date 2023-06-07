@@ -4182,7 +4182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2267856048729380896, guid: 7f9b12e5df6414743accdb149937f365, type: 3}
       propertyPath: sceneNames.Array.data[0]
-      value: Level 2-a
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 2267856048729380896, guid: 7f9b12e5df6414743accdb149937f365, type: 3}
       propertyPath: sceneNames.Array.data[1]
