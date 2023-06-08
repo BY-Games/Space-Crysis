@@ -39,6 +39,10 @@ public class PlayerAnimationState : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
+    public void ChangeAnimDynamic() {
+        
+    }
+
 
     // Start is called before the first frame update
     [FormerlySerializedAs("_idleState")] [SerializeField]

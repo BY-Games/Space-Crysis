@@ -11,7 +11,7 @@ public class AstronautController : MonoBehaviour
     [SerializeField] float linearDrag = 0.1f;
     [SerializeField] float angularDrag = 0.1f;
 
-    //numer of item the player can throw
+    //number of item the player can throw
     [SerializeField] int maxItemToThrow = 3;
 
     [SerializeField] GameObject gameOver;
@@ -29,12 +29,16 @@ public class AstronautController : MonoBehaviour
     private int throwCounter = 0;
     private int counter;
 
+    // Floating in space when in Idle state.
+    public float amplitude = 0.1f;
+    public float frequency = 0.4f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.drag = linearDrag;
         rb.angularDrag = angularDrag;
-
+        counter = maxItemToThrow - throwCounter;
+        throwsLeft.GetComponent<TMP_Text>().text = "x " + counter.ToString();
         gameOver.SetActive(false);
     }
 
@@ -42,6 +46,7 @@ public class AstronautController : MonoBehaviour
     {
         if (throwCounter < maxItemToThrow)
         {
+
             if (Input.GetMouseButtonDown(0))
             {
                 // Get the astronaut center position from the collider
@@ -79,7 +84,6 @@ public class AstronautController : MonoBehaviour
                 throwCounter++;
                 counter = maxItemToThrow - throwCounter;
 
-                /// need to fix not see all
                 throwsLeft.GetComponent<TMP_Text>().text = "x " + counter.ToString();
             }
         }
@@ -87,6 +91,7 @@ public class AstronautController : MonoBehaviour
 
         else if (Mathf.Abs(rb.velocity.x) < 0.01f && Mathf.Abs(rb.velocity.y) < 0.01f && playerActive)
         {
+
             Debug.Log("no more tool");
             if (GameManager.Instance.state is not GameManager.GameState.Win)
             {
