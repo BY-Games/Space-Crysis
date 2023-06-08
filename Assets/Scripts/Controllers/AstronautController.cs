@@ -63,7 +63,7 @@ public class AstronautController : MonoBehaviour
 
                 // calculate distance from astrunaut to current point when releasing mouse press
                 dragDistance = Mathf.Min(Vector3.Distance(mousePosition, dragStart), maxDragDistance);
-                Debug.Log("The Min Drag Distance is = " + dragDistance);
+                // Debug.Log("The Min Drag Distance is = " + dragDistance);
                 Vector3 dragArrowBody = (mousePosition - dragStart).normalized * dragDistance;
                 dragEnd = dragStart + dragArrowBody;
             }
