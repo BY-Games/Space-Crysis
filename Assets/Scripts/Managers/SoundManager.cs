@@ -4,15 +4,64 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+  
+    public static SoundManager instance;
+
+    [SerializeField]
+    AudioClip[] muiscSound, effectSound;
+
+    [SerializeField] AudioSource musicSource, effectSource;
+
+
+
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+        }
+        else
+        {
+            Destroy(gameObject);    
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void Start()
     {
-        
+        musicSource.clip = muiscSound[1];
+        musicSource.Play(); 
+    }
+
+
+    public void PlayEffect(int index)
+    {
+        effectSource.clip = effectSound[index];
+        effectSource.Play();
+
+    }
+
+
+    public void PlayMusic(int index)
+    {
+        musicSource.clip = muiscSound[index];
+        musicSource.Play();
+        musicSource.loop = true ;   
+    }
+
+    public void ChangeMasterVolume(float value)
+    {
+        AudioListener.volume = value;
+    }
+
+    public void ToggleEffect()
+    {
+        effectSource.mute = !effectSource.mute; 
+    }
+    public void ToggleMusic()
+    {
+        musicSource.mute = !musicSource.mute;
     }
 }

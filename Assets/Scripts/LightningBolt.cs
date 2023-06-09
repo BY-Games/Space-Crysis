@@ -20,6 +20,9 @@ public class LightningBolt : MonoBehaviour {
 
     public IEnumerator LightBoltBreaks() {
         while (true) {
+            SoundManager.instance.PlayEffect(1);
+            
+
             if (boltActive) {
                 foreach (GameObject lightningBolt in firstGroupLightningBolt) {
                     lightningBolt.SetActive(true);
