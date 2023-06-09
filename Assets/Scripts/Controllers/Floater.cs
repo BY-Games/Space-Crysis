@@ -1,15 +1,23 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine.Serialization;
 
 // Makes objects float up & down while gently spinning.
 public class Floater : MonoBehaviour {
     [FormerlySerializedAs("stopMove")] private bool stopMoveState = false;
+    [SerializeReference] private bool collisionSensitive = false;
 
-// User Inputs
-    public float amplitude = 0.5f;
-    public float frequency = 1f;
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (collisionSensitive) {
+            enabled = false;
+        }
+    }
+
+    // User Inputs
+    public float amplitude = 0.1f;
+    public float frequency = 0.4f;
 
 // Position Storage Variables
     Vector3 _posOffset = new Vector3();
