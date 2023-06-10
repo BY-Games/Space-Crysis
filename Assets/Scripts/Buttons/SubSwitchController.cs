@@ -23,6 +23,7 @@ public class SubSwitchController : MonoBehaviour {
             switchOn.SetActive(true);
             foreach (Floater bladeFloater in blades) {
                 bladeFloater.StopMove();
+            
             }
         }
     }

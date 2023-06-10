@@ -27,7 +27,13 @@ public class LevelButton : MonoBehaviour
 
     public void LoadScene()
     {
-        LevelManager.Instance.LoadScene(sceneIndex);
+       // LevelManager.Instance.LoadScene(sceneIndex)
+       
+       sceneIndex--;
+       LevelManager.Instance.setCurrentIndex(sceneIndex);
+       StartCoroutine(LevelManager.Instance.LoadScenes());
+
+
     }
 
 

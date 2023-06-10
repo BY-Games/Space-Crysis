@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     {
         //set the next scence in the order of the build. 
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        LevelManager.Instance.setCurrentIndex(0);
+
         StartCoroutine(LevelManager.Instance.LoadScenes());
 
        // SoundManager.instance.PlayMusic(0);
