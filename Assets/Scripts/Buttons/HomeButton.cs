@@ -11,7 +11,7 @@ public class HomeButton : MonoBehaviour
         LevelManager.Instance.ResetCurrentSceneIndex();
 
         //return to menu 
-        LevelManager.Instance.LoadScene(0);
+         LevelManager.Instance.LoadScene(0);
    
     }
 
