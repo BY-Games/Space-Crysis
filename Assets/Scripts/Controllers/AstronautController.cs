@@ -14,9 +14,7 @@ public class AstronautController : MonoBehaviour
     //number of item the player can throw
     [SerializeField] int maxItemToThrow = 3;
 
-    [SerializeField] GameObject gameOver;
     [SerializeField] GameObject throwsLeft;
-    [SerializeField] GameObject guide;
 
     private bool playerActive = true;
 
@@ -39,7 +37,6 @@ public class AstronautController : MonoBehaviour
         rb.angularDrag = angularDrag;
         counter = maxItemToThrow - throwCounter;
         throwsLeft.GetComponent<TMP_Text>().text = "x " + counter.ToString();
-        gameOver.SetActive(false);
     }
 
     void Update()
