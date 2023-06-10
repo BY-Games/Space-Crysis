@@ -3307,6 +3307,7 @@ GameObject:
   - component: {fileID: 1172682263}
   - component: {fileID: 1172682262}
   - component: {fileID: 1172682265}
+  - component: {fileID: 1172682266}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3331,8 +3332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6, y: 2.9}
-  m_SizeDelta: {x: 48.2288, y: 48.2288}
+  m_AnchoredPosition: {x: -4, y: 6}
+  m_SizeDelta: {x: 50.4368, y: 44.4047}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172682262
 MonoBehaviour:
@@ -3381,6 +3382,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1172682265}
         m_TargetAssemblyTypeName: ToggleAudio, Assembly-CSharp
         m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 1172682266}
+        m_TargetAssemblyTypeName: SpriteStt, Assembly-CSharp
+        m_MethodName: SpriteChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3442,6 +3455,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleMusic: 0
   toggleEffects: 1
+--- !u!114 &1172682266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172682260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157426a26254bfe41879237ba649494c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonSprtie:
+  - {fileID: 21300000, guid: 51468f64886f1d74c9fa7289512bb1c4, type: 3}
+  - {fileID: 21300000, guid: 584f0ff1207ce9947bc1baea010c4f45, type: 3}
+  targetButton: {fileID: 1172682263}
 --- !u!1 &1186984717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,7 +4137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15.236511, y: -191}
+  m_AnchoredPosition: {x: -15.236511, y: -50}
   m_SizeDelta: {x: -899.5229, y: -697.0715}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327599341
@@ -5067,7 +5096,7 @@ GameObject:
   - component: {fileID: 1753813659}
   - component: {fileID: 1753813658}
   m_Layer: 0
-  m_Name: title
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5203,6 +5232,7 @@ GameObject:
   - component: {fileID: 1756920194}
   - component: {fileID: 1756920193}
   - component: {fileID: 1756920196}
+  - component: {fileID: 1756920197}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5243,7 +5273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: -1
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5261,7 +5291,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 7937c6d65644b1c468a4abbe732b7faa, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: f5ffa5b8503c6a340bc758c9add30cd7, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: f5ffa5b8503c6a340bc758c9add30cd7, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -5277,6 +5307,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1756920196}
         m_TargetAssemblyTypeName: ToggleAudio, Assembly-CSharp
         m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 1756920197}
+        m_TargetAssemblyTypeName: SpriteStt, Assembly-CSharp
+        m_MethodName: SpriteChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5338,6 +5380,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleMusic: 1
   toggleEffects: 0
+--- !u!114 &1756920197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756920191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157426a26254bfe41879237ba649494c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonSprtie:
+  - {fileID: 21300000, guid: 7937c6d65644b1c468a4abbe732b7faa, type: 3}
+  - {fileID: 21300000, guid: 999425e90827aca4696e08f6f1a12ee9, type: 3}
+  targetButton: {fileID: 1756920194}
 --- !u!1 &1789464772
 GameObject:
   m_ObjectHideFlags: 0
@@ -6576,7 +6634,7 @@ GameObject:
   - component: {fileID: 2026974148}
   - component: {fileID: 2026974147}
   m_Layer: 5
-  m_Name: Sound Effect
+  m_Name: Sound Effect Mute Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6793,7 +6851,7 @@ GameObject:
   - component: {fileID: 2107488361}
   - component: {fileID: 2107488360}
   m_Layer: 5
-  m_Name: Sound Music
+  m_Name: 'Sound Music Mute Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
