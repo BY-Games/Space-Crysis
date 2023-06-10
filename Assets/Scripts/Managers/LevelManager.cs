@@ -128,7 +128,7 @@ public class LevelManager : MonoBehaviour {
         scene.allowSceneActivation = true;
         _loaderCanvas.SetActive(false);
 
-        yield return new WaitForSeconds(10);
+        // yield return new WaitForSeconds(1);
 
         GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
     }

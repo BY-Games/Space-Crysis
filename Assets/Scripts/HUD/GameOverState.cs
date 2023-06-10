@@ -2,12 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameOverState : MonoBehaviour
-{
+public class GameOverState : MonoBehaviour {
+    [SerializeField] private GameObject displayPanel;
     [SerializeField] GameObject OutOfToolsText;
     [SerializeField] GameObject EliminatedText;
-    private void Awake()
-    {
+    
+    public static GameOverState Instance;
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else {
+            Destroy(gameObject);
+        }
         GameManager.OnGameStateChange += ShowGameOverOnState;
     }
 
@@ -31,17 +39,20 @@ public class GameOverState : MonoBehaviour
 
             case GameManager.GameState.OutOfTools:
                 gameObject.SetActive(true);
+                displayPanel.gameObject.SetActive(true);
                 Debug.Log("out of fffff");
                 OutOfToolsText.gameObject.SetActive(true);
                 EliminatedText.gameObject.SetActive(false);
                 break;
             case GameManager.GameState.Eliminated:
                 gameObject.SetActive(true);
+                displayPanel.gameObject.SetActive(true);
                 EliminatedText.gameObject.SetActive(true);
                 OutOfToolsText.gameObject.SetActive(false);
 
                 break;
             default:
+                displayPanel.gameObject.SetActive(false);
                 EliminatedText.gameObject.SetActive(false);
                 OutOfToolsText.gameObject.SetActive(false);
                 break;

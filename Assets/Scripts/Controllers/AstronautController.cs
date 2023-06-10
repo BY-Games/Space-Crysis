@@ -93,8 +93,9 @@ public class AstronautController : MonoBehaviour
         {
 
             Debug.Log("no more tool");
-            if (GameManager.Instance.state is not GameManager.GameState.Win)
+            if (GameManager.Instance.state is not (GameManager.GameState.Win or GameManager.GameState.Eliminated))
             {
+                Debug.Log("Update state in AstronautController");
                 GameManager.Instance.UpdateGameState(GameManager.GameState.OutOfTools);
             }
 
