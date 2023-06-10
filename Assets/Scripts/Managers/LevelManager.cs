@@ -69,8 +69,7 @@ public class LevelManager : MonoBehaviour
 
 
 
-    public IEnumerator LoadScenes()
-    {
+    public IEnumerator LoadScenes() {
 
 
         SoundManager.instance.Stop();
@@ -90,13 +89,14 @@ public class LevelManager : MonoBehaviour
         scene.allowSceneActivation = false;
         _loaderCanvas.SetActive(true);
 
-        while (scene.progress < unityMaxLoad)
-        {
+        while (scene.progress < unityMaxLoad) {
 
             _target = scene.progress;
-            _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / unityMaxLoad, 3 * Time.deltaTime);
+            _progressBar.fillAmount =
+                Mathf.MoveTowards(_progressBar.fillAmount, _target / unityMaxLoad, 3 * Time.deltaTime);
             yield return null;
         }
+
         Task.Delay(1000);
         scene.allowSceneActivation = true;
         _loaderCanvas.SetActive(false);
@@ -106,22 +106,20 @@ public class LevelManager : MonoBehaviour
         GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
 
 
-        if (currentSceneIndex != 0)
-        {
+        if (currentSceneIndex != 0) {
             SoundManager.instance.PlayMusic(currentSceneIndex % 6);
         }
-        else
-        {
+        else {
             SoundManager.instance.PlayMusic(currentSceneIndex);
 
         }
 
 
         // yield return new WaitForSeconds(1);
+    }
 
 
-
-        public void LoadScene(int sceneIndex)
+    public void LoadScene(int sceneIndex)
         {
             StartCoroutine(LoadScenes(sceneIndex));
         }
