@@ -96,6 +96,7 @@ namespace DigitalRuby.LightningBolt
         private int animationOffsetIndex;
         private int animationPingPongDirection = 1;
         private bool orthographic;
+        
 
         private void GetPerpendicularVector(ref Vector3 directionNormalized, out Vector3 side)
         {
@@ -290,6 +291,7 @@ namespace DigitalRuby.LightningBolt
             lineRenderer = GetComponent<LineRenderer>();
             lineRenderer.positionCount = 0;
             UpdateFromMaterialChange();
+
         }
 
         private void Update()
@@ -308,6 +310,10 @@ namespace DigitalRuby.LightningBolt
                 }
             }
             timer -= Time.deltaTime;
+
+
+
+
         }
 
         /// <summary>

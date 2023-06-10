@@ -11,8 +11,10 @@ public class LevelManager : MonoBehaviour {
     [SerializeField] private String[] sceneNames;
 
     private int currentSceneIndex = 0;
-    
-    
+
+
+  
+
     // LoaderCanvas and ProgressBar are the display between the scenes.
     [SerializeField] private GameObject _loaderCanvas;
     [SerializeField] private Image _progressBar;
@@ -30,6 +32,8 @@ public class LevelManager : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
+
+        
     }
 
     // public IEnumerator LoadScenes(string sceneName)
@@ -56,12 +60,16 @@ public class LevelManager : MonoBehaviour {
     //     GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
     // }
     
+
+
+
+
     public IEnumerator LoadScenes()
     {
 
 
         //this is for work only delte after work 
-        //currentSceneIndex = 0;
+        //currentSceneIndex = 7;
         //////////////////////////////
 
         _target = zeroValue;

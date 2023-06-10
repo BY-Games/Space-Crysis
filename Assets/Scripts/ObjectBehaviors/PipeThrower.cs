@@ -31,6 +31,12 @@ public class PipeThrower : MonoBehaviour
         // Check if the collision was with the astronaut
         if (collision.gameObject.CompareTag("Player"))
         {
+
+
+            SoundManager.instance.PlayEffect(0);
+            
+
+
             float impactStrength = collision.relativeVelocity.magnitude;
             // Debug.Log("Got Collision");
 
@@ -79,6 +85,9 @@ public class PipeThrower : MonoBehaviour
             Vector3 exitPipeForce = throwDirection * throwForce * impactStrength;
             // Debug.Log("Direction Vector " + exitPipeForce);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(exitPipeForce, ForceMode2D.Impulse);
+
+
+        
         }
     }
 
