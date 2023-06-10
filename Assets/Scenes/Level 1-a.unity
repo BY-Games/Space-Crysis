@@ -145,6 +145,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e26e19aa0b37747ace83966467cc48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7086376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7086369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee61ef58fce97dc4ebd1da5bf3450240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7302685
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 21278964}
   - component: {fileID: 21278963}
+  - component: {fileID: 21278965}
   m_Layer: 0
   m_Name: Plumb_Pipe_Blank
   m_TagString: Untagged
@@ -292,6 +305,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &21278965
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21278962}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 0.8}
+    newSize: {x: 5.12, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 0.8}
+  m_EdgeRadius: 0
 --- !u!1 &40919571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,7 +1810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1024693914}
   - component: {fileID: 1024693913}
-  - component: {fileID: 1024693915}
+  - component: {fileID: 1024693916}
   m_Layer: 0
   m_Name: Plumb_Pipe_Blank (2)
   m_TagString: Untagged
@@ -1847,22 +1886,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.744}
---- !u!114 &1024693915
-MonoBehaviour:
+--- !u!61 &1024693916
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024693912}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdf4fc0162366894eb8c6506a3b6cc21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstGroupLightningBolt:
-  - {fileID: 7086369}
-  secondGroupLightningBolt: []
-  timeOfBreak: 2
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 0.5}
+    newSize: {x: 5.12, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &1088315591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,6 +1922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1088315593}
   - component: {fileID: 1088315592}
+  - component: {fileID: 1088315594}
   m_Layer: 0
   m_Name: Plumb_Pipe_Blank (1)
   m_TagString: Untagged
@@ -1947,6 +1997,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1088315594
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088315591}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 0.5}
+    newSize: {x: 5.12, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1001 &1088893316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2950,6 +3026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1639883700}
   - component: {fileID: 1639883699}
+  - component: {fileID: 1639883701}
   m_Layer: 0
   m_Name: Plumb_Pipe_Blank (3)
   m_TagString: Untagged
@@ -3024,6 +3101,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1639883701
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639883698}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 0.5}
+    newSize: {x: 5.12, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &1734712804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734712806}
   - component: {fileID: 1734712805}
+  - component: {fileID: 1734712807}
   m_Layer: 0
   m_Name: Plumb_Pipe_Blank (4)
   m_TagString: Untagged
@@ -3108,6 +3212,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1734712807
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734712804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 0.5}
+    newSize: {x: 5.12, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &1948758808
 GameObject:
   m_ObjectHideFlags: 0

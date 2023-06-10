@@ -43,7 +43,6 @@ public class Floater : MonoBehaviour {
         _tempPos = _posOffset;
 
         _tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
-        Debug.Log(_tempPos.y);
 
         if (stopMoveState) {
             if (Math.Abs(_tempPos.y - _minPos) < Mathf.Epsilon) {

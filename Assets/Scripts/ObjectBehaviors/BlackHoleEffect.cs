@@ -1,9 +1,15 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BlackHoleEffect : MonoBehaviour {
+    [SerializeField] private CircleCollider2D pointEffectorCollider2D;
+    [SerializeField] [Tooltip("Best values to set is between 0.1f-0.5f")]
+    private float growthScale = 0.1f;
     public float shrinkSpeed = 1f; // Speed at which the objects shrink
     public float rotateSpeed = 10f; // Speed at which the objects rotate
+    
+    
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
@@ -30,6 +36,11 @@ public class BlackHoleEffect : MonoBehaviour {
         if (newScale.x <= 0.1f) {
             // Disable the object
             other.gameObject.SetActive(false);
+            GetComponentInParent<Transform>().parent.localScale += Vector3.one * 0.05f;
+
+            if (pointEffectorCollider2D != null) {
+                pointEffectorCollider2D.radius += growthScale;
+            }
         }
     }
 }
