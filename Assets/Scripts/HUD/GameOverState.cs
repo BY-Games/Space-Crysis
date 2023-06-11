@@ -26,6 +26,7 @@ public class GameOverState : MonoBehaviour {
     private void ShowGameOverOnState(GameManager.GameState state)
     {
 
+
         /*
         gameObject.SetActive(state is GameManager.GameState.OutOfTools);
         
@@ -43,12 +44,16 @@ public class GameOverState : MonoBehaviour {
                 Debug.Log("out of fffff");
                 OutOfToolsText.gameObject.SetActive(true);
                 EliminatedText.gameObject.SetActive(false);
+                SoundManager.instance.PlayEffect3(8);
+
                 break;
             case GameManager.GameState.Eliminated:
                 gameObject.SetActive(true);
                 displayPanel.gameObject.SetActive(true);
                 EliminatedText.gameObject.SetActive(true);
                 OutOfToolsText.gameObject.SetActive(false);
+                SoundManager.instance.PlayEffect3(8);
+
 
                 break;
             default:

@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
     //effectSource handle: pipe, lightbolt, wall , smoke.
     //effectSource2 handle: saw. 
     //buttonSource handle the sound button
-    [SerializeField] AudioSource musicSource, effectSource, effectSource2, buttonSource;
+    [SerializeField] AudioSource musicSource, effectSource, effectSource2, buttonSource , effectSource3;
 
 
 
@@ -57,7 +57,13 @@ public class SoundManager : MonoBehaviour
         effectSource2.loop = true;
 
     }
+    public void PlayEffect3(int index)
+    {
+        effectSource3.clip = effectSound[index];
 
+        effectSource3.Play();
+
+    }
 
 
     public void Stop()
@@ -67,6 +73,7 @@ public class SoundManager : MonoBehaviour
         effectSource.Stop();
         effectSource2.Stop();
         musicSource.Stop();
+        effectSource3.Stop();
 
 
     }
@@ -100,6 +107,7 @@ public class SoundManager : MonoBehaviour
         effectSource.volume = value;
         effectSource2.volume = value;
         buttonSource.volume = value;
+        effectSource3.volume = value;
 
     }
 
@@ -109,6 +117,7 @@ public class SoundManager : MonoBehaviour
         effectSource.mute = !effectSource.mute;
         effectSource2.mute = !effectSource.mute;
         buttonSource.mute = !buttonSource.mute;
+        effectSource3.mute = !effectSource.mute;
     }
 
 
