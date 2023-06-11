@@ -18,7 +18,7 @@ public class SoundManager : MonoBehaviour
     //buttonSource handle the sound button
     [SerializeField] AudioSource musicSource, effectSource, effectSource2, buttonSource , effectSource3;
 
-
+    public bool musicSoundMuted = false, effectSoundMuted = false;  
 
 
     private void Awake()
@@ -118,11 +118,18 @@ public class SoundManager : MonoBehaviour
         effectSource2.mute = !effectSource.mute;
         buttonSource.mute = !buttonSource.mute;
         effectSource3.mute = !effectSource.mute;
+
+        effectSoundMuted = !effectSoundMuted;
     }
 
 
     public void ToggleMusic()
     {
         musicSource.mute = !musicSource.mute;
+
+        musicSoundMuted = !musicSoundMuted;
+        
     }
+
+
 }
