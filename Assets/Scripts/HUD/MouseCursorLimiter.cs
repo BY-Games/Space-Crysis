@@ -83,12 +83,17 @@ public class MouseCursorLimiter : MonoBehaviour {
         }
     }
 
-    private void CalculateCameraBoundaries() {
-        // Calculate the camera's boundaries in screen coordinates based on the game window size
-        minX = 0;
-        maxX = Camera.main.pixelRect.width;
-        minY = 0;
-        maxY = Camera.main.pixelRect.height;
+    private void CalculateCameraBoundaries()
+    {
+        // Get the corners of the visible area in screen coordinates
+        Vector3 bottomLeft = Camera.main.WorldToScreenPoint(Camera.main.ScreenToWorldPoint(Vector3.zero));
+        Vector3 topRight = Camera.main.WorldToScreenPoint(Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height)));
+
+        // Calculate the camera's boundaries in screen coordinates
+        minX = bottomLeft.x;
+        maxX = topRight.x;
+        minY = bottomLeft.y;
+        maxY = topRight.y;
     }
 
     private void SetCursorPosition(Vector3 position) {
