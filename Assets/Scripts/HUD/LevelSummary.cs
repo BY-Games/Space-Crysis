@@ -45,6 +45,9 @@ public class LevelSummary : MonoBehaviour {
     }
 
     private void ActivatePanel() {
-        summaryPanel.gameObject.SetActive(true);
+        if (GameManager.Instance.state is GameManager.GameState.Win) {
+            summaryPanel.gameObject.SetActive(true);
+        }
+        
     }
 }

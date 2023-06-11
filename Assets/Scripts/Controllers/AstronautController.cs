@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -27,9 +28,19 @@ public class AstronautController : MonoBehaviour
     private int throwCounter = 0;
     private int counter;
 
-    // Floating in space when in Idle state.
-    public float amplitude = 0.1f;
-    public float frequency = 0.4f;
+    private void Awake() {
+        GameManager.OnGameStateChange += SetAstronautPlayableOnState;
+    }
+
+    private void OnDestroy() {
+        GameManager.OnGameStateChange -= SetAstronautPlayableOnState;
+
+    }
+
+    private void SetAstronautPlayableOnState(GameManager.GameState state) {
+        enabled = (state is GameManager.GameState.InGame);
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,14 +57,15 @@ public class AstronautController : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                // Get the astronaut center position from the collider
-                dragStart = gameObject.GetComponent<Collider2D>().bounds.center;
+                
                 // Set to dragging mode - ON
                 isDragging = true;
                 dragDistance = 0f;
             }
             else if (Input.GetMouseButton(0) && isDragging)
             {
+                // Get the astronaut center position from the collider
+                dragStart = gameObject.GetComponent<Collider2D>().bounds.center;
                 // get mouse position in every frame of holding mouse down.
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = 0;
