@@ -19,6 +19,9 @@ public class WinAnnouncement : MonoBehaviour
         {
             // announcement.gameObject.SetActive(true);
             GameManager.Instance.UpdateGameState(GameManager.GameState.Win);
+
+            SoundManager.instance.PlayEffect(4);
+
         }
     }
 }

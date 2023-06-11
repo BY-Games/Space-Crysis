@@ -33,11 +33,15 @@ public class LevelSummary : MonoBehaviour {
             summaryPanel.gameObject.SetActive(false);
         }
         else {
+        
             fixWall.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             fixWall.gameObject.SetActive(false);
 
             fixWall.gameObject.SetActive(true);
             Invoke(nameof(ActivatePanel), 3f);
+
+
+         
         }
 
         
@@ -46,7 +50,9 @@ public class LevelSummary : MonoBehaviour {
 
     private void ActivatePanel() {
         if (GameManager.Instance.state is GameManager.GameState.Win) {
+            
             summaryPanel.gameObject.SetActive(true);
+         
         }
         
     }

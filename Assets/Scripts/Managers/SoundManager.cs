@@ -13,7 +13,7 @@ public class SoundManager : MonoBehaviour
     AudioClip[] muiscSound, effectSound, buttonSound;
 
     //musicSource handle backgorundMuisc
-    //effectSource handle: pipe, lightbolt.
+    //effectSource handle: pipe, lightbolt, wall , smoke.
     //effectSource2 handle: saw. 
     //buttonSource handle the sound button
     [SerializeField] AudioSource musicSource, effectSource, effectSource2, buttonSource;

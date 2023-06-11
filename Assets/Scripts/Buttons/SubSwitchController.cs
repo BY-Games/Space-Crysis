@@ -4,27 +4,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class SubSwitchController : MonoBehaviour {
-    [FormerlySerializedAs("Blades")] [SerializeField]
+public class SubSwitchController : MonoBehaviour
+{
+    [FormerlySerializedAs("Blades")]
+    [SerializeField]
     private Floater[] blades;
 
     [SerializeField] private GameObject switchOn;
 
-    [FormerlySerializedAs("switchOf")] [SerializeField]
+    [FormerlySerializedAs("switchOf")]
+    [SerializeField]
     private GameObject switchOff;
 
+    private bool swithSoundHappendBefore = false;
+
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
         switchOn.SetActive(false);
         switchOff.SetActive(true);
     }
 
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+
         Debug.Log("Here");
         switchOff.SetActive(false);
         switchOn.SetActive(true);
-        foreach (Floater bladeFloater in blades) {
+
+        if (!swithSoundHappendBefore)
+        {
+            SoundManager.instance.PlayEffect(6);
+            swithSoundHappendBefore = true;
+        }
+        foreach (Floater bladeFloater in blades)
+        {
             bladeFloater.StopMove();
         }
     }

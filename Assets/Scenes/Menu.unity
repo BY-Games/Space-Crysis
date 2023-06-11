@@ -6181,10 +6181,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a704868e89648884aa36b20511398f2b, type: 3}
   - {fileID: 8300000, guid: 61b3c8b0e65f1c640b715ceb6fec5f41, type: 3}
   - {fileID: 8300000, guid: a8a80ca75d182ad448afb676e29693ae, type: 3}
+  - {fileID: 8300000, guid: ad87185f4c3ff384082cc1ad0b14d91d, type: 3}
   effectSound:
   - {fileID: 8300000, guid: 6870a4cbe3310334aa47e0b6a25f83ef, type: 3}
   - {fileID: 8300000, guid: c54cc28a6cea0b9408008e6a77a8c7cd, type: 3}
   - {fileID: 8300000, guid: f680c43e56d7d9b4bae58a79bd8f2c0e, type: 3}
+  - {fileID: 8300000, guid: 8d8762bc8802e7943806288084b59d76, type: 3}
+  - {fileID: 8300000, guid: dfbd2d8e36a51b9468171b1b62cea8ef, type: 3}
+  - {fileID: 8300000, guid: a1d1ae10fa2c6a444af87779d6bf56e5, type: 3}
+  - {fileID: 8300000, guid: 8bf9fb827df1ce34da2d0ba2632be33b, type: 3}
+  - {fileID: 8300000, guid: 1be8abb71532d29419d20ddae001c21d, type: 3}
   buttonSound:
   - {fileID: 8300000, guid: c9f5ad5e1c0a58345a2d82ea7eadfd79, type: 3}
   - {fileID: 8300000, guid: 2cdc82d972e981b4cb5b630adacf18b4, type: 3}

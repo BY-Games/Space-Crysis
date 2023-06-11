@@ -18,7 +18,7 @@ public class BlackHoleEffect : MonoBehaviour {
     }
 
     private void OnTriggerStay2D(Collider2D other) {
-        Debug.Log("OnTrigger with -> " + other.tag);
+       // Debug.Log("OnTrigger with -> " + other.tag);
         // Shrink the object
         Vector3 newScale = other.transform.localScale - Vector3.one * shrinkSpeed * Time.fixedDeltaTime;
         other.transform.localScale = newScale;

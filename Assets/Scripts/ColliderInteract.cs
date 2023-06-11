@@ -12,6 +12,15 @@ public class ColliderInteract : MonoBehaviour {
     }
 
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+
+        SoundManager.instance.PlayEffect(5);
+
+
+    }
+
     private void Start() {
         _rb = gameObject.GetComponent<Rigidbody2D>();
         _initialPosition = transform.position;
@@ -29,4 +38,7 @@ public class ColliderInteract : MonoBehaviour {
             Debug.LogError("Layer '" + layerName + "' does not exist!");
         }
     }
+
+
+
 }
