@@ -4585,7 +4585,7 @@ PrefabInstance:
       objectReference: {fileID: 1531322814}
     - target: {fileID: 547688022471435039, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
       propertyPath: maxItemToThrow
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -2142511891522560553, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}

@@ -76,7 +76,7 @@ public class MouseCursorLimiter : MonoBehaviour {
             // Check if the mouse position needs to be updated
             if (clampedPosition != mousePosition) {
                 // Move the cursor to the clamped position
-                Cursor.visible = false; // Hide the cursor temporarily
+                // Cursor.visible = false; // Hide the cursor temporarily
                 SetCursorPosition(clampedPosition);
                 Cursor.visible = true; // Show the cursor again
             }
@@ -86,9 +86,9 @@ public class MouseCursorLimiter : MonoBehaviour {
     private void CalculateCameraBoundaries() {
         // Calculate the camera's boundaries in screen coordinates based on the game window size
         minX = 0;
-        maxX = Screen.width;
+        maxX = Camera.main.pixelRect.width;
         minY = 0;
-        maxY = Screen.height;
+        maxY = Camera.main.pixelRect.height;
     }
 
     private void SetCursorPosition(Vector3 position) {

@@ -6011,7 +6011,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938202526}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a646d1243a69e9944bbe8936cff8079e, type: 3}
   m_Name: 
@@ -7471,15 +7471,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2267856048729380896, guid: 7f9b12e5df6414743accdb149937f365, type: 3}
       propertyPath: sceneNames.Array.data[5]
-      value: Level 1-d
+      value: Level 1-f
       objectReference: {fileID: 0}
     - target: {fileID: 2267856048729380896, guid: 7f9b12e5df6414743accdb149937f365, type: 3}
       propertyPath: sceneNames.Array.data[6]
-      value: Level 1-e
+      value: Level 1-d
       objectReference: {fileID: 0}
     - target: {fileID: 2267856048729380896, guid: 7f9b12e5df6414743accdb149937f365, type: 3}
       propertyPath: sceneNames.Array.data[7]
-      value: Level 1-f
+      value: Level 1-e
       objectReference: {fileID: 0}
     - target: {fileID: 2267856048729380896, guid: 7f9b12e5df6414743accdb149937f365, type: 3}
       propertyPath: sceneNames.Array.data[8]
@@ -7521,6 +7521,10 @@ PrefabInstance:
     - target: {fileID: 1025535893199798508, guid: b2c126898b0fdc04ca7a869817d73071, type: 3}
       propertyPath: m_Color.a
       value: 0.8862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279681943515929362, guid: b2c126898b0fdc04ca7a869817d73071, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1400705102211787415, guid: b2c126898b0fdc04ca7a869817d73071, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
