@@ -99,6 +99,7 @@ public class SoundManager : MonoBehaviour
 
         effectSource.volume = value;
         effectSource2.volume = value;
+        buttonSource.volume = value;
 
     }
 
@@ -107,6 +108,7 @@ public class SoundManager : MonoBehaviour
     {
         effectSource.mute = !effectSource.mute;
         effectSource2.mute = !effectSource.mute;
+        buttonSource.mute = !buttonSource.mute;
     }
 
 
