@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -27,6 +28,18 @@ public class AstronautController : MonoBehaviour
     private int throwCounter = 0;
     private int counter;
 
+    private void Awake() {
+        GameManager.OnGameStateChange += SetAstronautPlayableOnState;
+    }
+
+    private void OnDestroy() {
+        GameManager.OnGameStateChange -= SetAstronautPlayableOnState;
+
+    }
+
+    private void SetAstronautPlayableOnState(GameManager.GameState state) {
+        enabled = (state is GameManager.GameState.InGame);
+    }
 
     void Start()
     {

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Kalkatos.DottedArrow {
@@ -30,6 +31,17 @@ namespace Kalkatos.DottedArrow {
             canvas = GetComponentInParent<Canvas>();
             mainCamera = Camera.main;
             SetActive(startsActive);
+
+            GameManager.OnGameStateChange += SetVisibleArrowOnState;
+        }
+
+        private void OnDestroy() {
+            GameManager.OnGameStateChange -= SetVisibleArrowOnState;
+        }
+
+        private void SetVisibleArrowOnState(GameManager.GameState state) {
+            gameObject.SetActive(state is GameManager.GameState.InGame);
+            throwBoundariesCircle.gameObject.SetActive(state is GameManager.GameState.InGame);
         }
 
         private void Update() {

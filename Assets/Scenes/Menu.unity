@@ -7786,12 +7786,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7988359627360560854, guid: b2c126898b0fdc04ca7a869817d73071, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988359627360560854, guid: b2c126898b0fdc04ca7a869817d73071, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5671403971864182460}
+      objectReference: {fileID: 5671403971864182461}
     - target: {fileID: 7988359627360560854, guid: b2c126898b0fdc04ca7a869817d73071, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: home
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988359627360560854, guid: b2c126898b0fdc04ca7a869817d73071, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HomeButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8599981703625123360, guid: b2c126898b0fdc04ca7a869817d73071, type: 3}
       propertyPath: m_Material
