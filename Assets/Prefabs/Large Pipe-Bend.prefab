@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6433152986117842889
 Transform:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4447382656833175380
 Transform:
   m_ObjectHideFlags: 0
@@ -260,9 +260,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwForce: 10
   straight: 0
+  type: 0
   firstEntrance: 0
   exitPipe: {fileID: 6433152986117842889}
   secondEntrance: {fileID: 4395702697284268732}
+  extendedBendTrasform: {fileID: 0}
 --- !u!50 &2068768715484985813
 Rigidbody2D:
   serializedVersion: 4
@@ -411,9 +413,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwForce: 10
   straight: 0
+  type: 0
   firstEntrance: 1
   exitPipe: {fileID: 4395702697882449652}
   secondEntrance: {fileID: 4447382656833175380}
+  extendedBendTrasform: {fileID: 0}
 --- !u!50 &4395702697284268733
 Rigidbody2D:
   serializedVersion: 4
