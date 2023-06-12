@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 // using UnityEditor;
 using UnityEngine;
@@ -41,29 +42,6 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    // public IEnumerator LoadScenes(string sceneName)
-    // {
-    //     _target = zeroValue;
-    //     _progressBar.fillAmount = zeroValue;
-    //
-    //     var scene = SceneManager.LoadSceneAsync(sceneName);
-    //     scene.allowSceneActivation = false;
-    //
-    //     _loaderCanvas.SetActive(true);
-    //
-    //     while (scene.progress < unityMaxLoad)
-    //     {
-    //         
-    //         _target = scene.progress;
-    //         _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target / unityMaxLoad, 3 * Time.deltaTime);
-    //         yield return null;
-    //     }
-    //     Task.Delay(1000);
-    //     scene.allowSceneActivation = true;
-    //     _loaderCanvas.SetActive(false);
-    //     Task.Delay(10000);
-    //     GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
-    // }
 
 
 
@@ -107,21 +85,24 @@ public class LevelManager : MonoBehaviour
 
 
 
-        //menu and last level(black hole) should have their own sound.
-        if (currentSceneIndex != 0 && currentSceneIndex != sceneNames.Length ) {
-            SoundManager.instance.PlayMusic(currentSceneIndex % 6);
+        //menu and open scene
+        if (currentSceneIndex <= 1)
+        {
+            SoundManager.instance.PlayMusic(0);
         }
-        else if (currentSceneIndex == 0){
-            SoundManager.instance.PlayMusic(currentSceneIndex);
+       // last level(black hole)
+        else if (currentSceneIndex == 10)
+        {
+            SoundManager.instance.PlayMusic(6);
 
         }else
         {
-
-            Debug.Log("currentSceneIndex " + currentSceneIndex);
-
-            SoundManager.instance.PlayMusic(6);
+            SoundManager.instance.PlayMusic(currentSceneIndex % 6);
 
         }
+
+
+      
 
 
         // yield return new WaitForSeconds(1);
@@ -164,23 +145,23 @@ public class LevelManager : MonoBehaviour
             GameManager.Instance.UpdateGameState(GameManager.GameState.Tutorial);
 
 
-        
 
 
-        //menu and last level(black hole) should have their own sound.
-        if (currentSceneIndex != 0 && currentSceneIndex != sceneNames.Length )
+
+        //menu and open scene
+        if (currentSceneIndex <= 1 )
         {
-            SoundManager.instance.PlayMusic(currentSceneIndex % 6);
+            SoundManager.instance.PlayMusic(0);
         }
-        else if (currentSceneIndex == 0)
+        // last level(black hole)
+        else if (currentSceneIndex == 10)
         {
-            SoundManager.instance.PlayMusic(currentSceneIndex);
+            SoundManager.instance.PlayMusic(6);
 
         }
         else
         {
-            
-            SoundManager.instance.PlayMusic(6);
+            SoundManager.instance.PlayMusic(currentSceneIndex % 6);
 
         }
     }

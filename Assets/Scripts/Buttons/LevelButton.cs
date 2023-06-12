@@ -17,6 +17,8 @@ public class LevelButton : MonoBehaviour
 
     void Start()
     {
+        sceneIndex--;
+
         // Get the TextMeshPro component from the child object
         levelText = textContainer.GetComponentInChildren<TextMeshProUGUI>();
 
@@ -29,7 +31,6 @@ public class LevelButton : MonoBehaviour
     {
        // LevelManager.Instance.LoadScene(sceneIndex)
        
-       sceneIndex--;
        LevelManager.Instance.setCurrentIndex(sceneIndex);
        StartCoroutine(LevelManager.Instance.LoadScenes());
 
