@@ -196,7 +196,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -497,7 +497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7554352860862814367, guid: 53ae14c8d587594418e29d6a654b9e42, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7554352860862814368, guid: 53ae14c8d587594418e29d6a654b9e42, type: 3}
       propertyPath: ShapeModule.m_Scale.x
@@ -534,6 +534,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7554352860862814367, guid: 53ae14c8d587594418e29d6a654b9e42, type: 3}
   m_PrefabInstance: {fileID: 271678697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &294612303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294612302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8e6b6183e95114a955df6d0b962b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &295779433
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +635,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2629167150069604765, guid: 77b61187e6ad5894e9449c42bd9309cf, type: 3}
   m_PrefabInstance: {fileID: 2057494944}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &346112385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346112383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a262f9ca713efd34e9c7a3625e98c632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371582461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,6 +1295,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astronaut: {fileID: 1857750370}
+--- !u!114 &1402635524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402635518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a262f9ca713efd34e9c7a3625e98c632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1667931925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,6 +1729,10 @@ PrefabInstance:
     - target: {fileID: 2629167150069604765, guid: 77b61187e6ad5894e9449c42bd9309cf, type: 3}
       propertyPath: m_Name
       value: CFXR3 Hit Fire B (Air)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629167150069604765, guid: 77b61187e6ad5894e9449c42bd9309cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b61187e6ad5894e9449c42bd9309cf, type: 3}
