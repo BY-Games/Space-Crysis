@@ -1,12 +1,16 @@
 using UnityEngine;
 
 
-
-public class MoveToNextLevel : MonoBehaviour
-{
+public class MoveToNextLevel : MonoBehaviour {
+    [SerializeReference] private bool startActive;
     private void Start() {
-        StartCoroutine(LevelManager.Instance.LoadScenes());
+        if (startActive) {
+            Skip();
+        }
+        
     }
 
-    
+    public void Skip() {
+        StartCoroutine(LevelManager.Instance.LoadScenes());
+    }
 }
