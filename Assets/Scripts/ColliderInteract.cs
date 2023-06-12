@@ -16,7 +16,7 @@ public class ColliderInteract : MonoBehaviour {
     {
 
 
-        SoundManager.instance.PlayEffect(5);
+        SoundManager.instance.PlayEffect3(5);
 
 
     }

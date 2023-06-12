@@ -33,7 +33,7 @@ public class PipeThrower : MonoBehaviour
         {
 
 
-            SoundManager.instance.PlayEffect(0);
+            SoundManager.instance.PlayEffect3(0);
             
 
 

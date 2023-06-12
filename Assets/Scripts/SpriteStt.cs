@@ -21,7 +21,7 @@ public class SpriteStt : MonoBehaviour
                 SpriteChange();
             }
         }
-        else if (effect) 
+        else if (effect)
         {
             if (SoundManager.instance.effectSoundMuted)
             {

@@ -36,7 +36,7 @@ public class SubSwitchController : MonoBehaviour
 
         if (!swithSoundHappendBefore)
         {
-            SoundManager.instance.PlayEffect(6);
+            SoundManager.instance.PlayEffect3(6);
             swithSoundHappendBefore = true;
         }
         foreach (Floater bladeFloater in blades)
