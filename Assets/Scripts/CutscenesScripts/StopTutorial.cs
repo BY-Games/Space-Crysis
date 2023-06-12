@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StopTutorial : MonoBehaviour
-{
+public class StopTutorial : MonoBehaviour {
+    [SerializeField] private GameObject player;
     private void Awake() {
         GameManager.OnGameStateChange += SetStopTimelineOnState;
     }
@@ -15,6 +15,9 @@ public class StopTutorial : MonoBehaviour
 
     private void SetStopTimelineOnState(GameManager.GameState state) {
         if (state is not GameManager.GameState.Tutorial) {
+            if (player != null) {
+                player.SetActive(true);
+            }
             Destroy(gameObject);
         }
     }
