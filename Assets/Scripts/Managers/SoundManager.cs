@@ -13,12 +13,14 @@ public class SoundManager : MonoBehaviour
     AudioClip[] muiscSound, effectSound, buttonSound;
 
     //musicSource handle backgorundMuisc
-    //effectSource handle: pipe, lightbolt, wall , smoke.
-    //effectSource2 handle: saw. 
-    //buttonSource handle the sound button
-    [SerializeField] AudioSource musicSource, effectSource, effectSource2, buttonSource , effectSource3;
+    //effectSource handle: lightbolt.
+    //effectSource2 handle: saw,smoke 
+    //effectSource3 handle: win, lose sound , wall,  pipe ,switch
+    //buttonSource handle the sound button.
+    [SerializeField] public AudioSource musicSource, effectSource, effectSource2, buttonSource , effectSource3;
 
-    public bool musicSoundMuted = false, effectSoundMuted = false;  
+    public bool musicSoundMuted = false, effectSoundMuted = false;
+ 
 
 
     private void Awake()
@@ -47,6 +49,7 @@ public class SoundManager : MonoBehaviour
     {
         effectSource.clip = effectSound[index];
         effectSource.Play();
+      // effectSource.loop = true;
 
     }
     public void PlayEffect2(int index)
@@ -62,6 +65,7 @@ public class SoundManager : MonoBehaviour
         effectSource3.clip = effectSound[index];
 
         effectSource3.Play();
+      //  effectSource2.loop = true;
 
     }
 

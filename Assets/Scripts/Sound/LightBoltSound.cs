@@ -8,12 +8,14 @@ public class LightBoltSound : MonoBehaviour
     void Start()
     {
         SoundManager.instance.PlayEffect(1);
+        SoundManager.instance.effectSource.loop = true;
+   
 
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        SoundManager.instance.effectSource.loop = false;
     }
+
+
 }
