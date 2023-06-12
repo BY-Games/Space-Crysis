@@ -14311,6 +14311,7 @@ GameObject:
   - component: {fileID: 4824931725321232819}
   - component: {fileID: 4824931725321232780}
   - component: {fileID: 4824931725321232817}
+  - component: {fileID: 7304466126925657371}
   m_Layer: 0
   m_Name: CFXR Hit A (Red)
   m_TagString: Untagged
@@ -19224,6 +19225,18 @@ MonoBehaviour:
     perlinColor: 0
     perlinColorSpeed: 1
   fadeOutReference: {fileID: 0}
+--- !u!114 &7304466126925657371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824931725321232781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a262f9ca713efd34e9c7a3625e98c632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5687437753806481648
 GameObject:
   m_ObjectHideFlags: 0
