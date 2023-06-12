@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: slide_down
+  m_Name: slide_down 1
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,37 +20,27 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 4857335772653305134, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: 4857335772653305134, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.05
-      value: {fileID: -329969244792713109, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: -329969244792713109, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.1
-      value: {fileID: -7909398147288137428, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: -7909398147288137428, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.15
-      value: {fileID: 5850636965976271850, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: 5850636965976271850, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.2
-      value: {fileID: -5470278947253641299, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: -5470278947253641299, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.25
-      value: {fileID: -7826137699747185008, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: -7826137699747185008, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.3
-      value: {fileID: -3649443920344856325, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: -3649443920344856325, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.35
-      value: {fileID: 4606067871806678329, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: 4606067871806678329, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.4
-      value: {fileID: -5719591081113913424, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: -5719591081113913424, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.45
       value: {fileID: 17345911028680437, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     - time: 0.5
-      value: {fileID: -9218011682180229013, guid: 38259642eea83c740b18225fcc6afcb8,
-        type: 3}
+      value: {fileID: -9218011682180229013, guid: 38259642eea83c740b18225fcc6afcb8, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
