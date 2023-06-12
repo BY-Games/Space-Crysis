@@ -2,22 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class StartDragDemo : MonoBehaviour {
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject cursorDragDemo;
+
+    [FormerlySerializedAs("cursorDragDemo")] [SerializeField]
+    private GameObject SecondDemoToPlay;
+
     [SerializeField] private GameObject dragArrowDemo;
 
     [SerializeField] private GameObject parent;
     // Start is called before the first frame update
-    
-    void Start()
-    {
-        player.gameObject.SetActive(true);
 
-        cursorDragDemo.gameObject.SetActive(true);
-        dragArrowDemo.gameObject.SetActive(true);
+    void Start() {
+        if (player != null) {
+            player.gameObject.SetActive(true);
+        }
+
+
+        SecondDemoToPlay.gameObject.SetActive(true);
+        if (dragArrowDemo != null) {
+            dragArrowDemo.gameObject.SetActive(true);
+        }
+
         Destroy(parent.gameObject);
     }
-
 }
