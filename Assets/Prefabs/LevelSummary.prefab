@@ -322,7 +322,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5671403972130496440}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &8599981703625123360
 EdgeCollider2D:
@@ -513,8 +513,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8782506649322210036}
   - {fileID: 1279681943515929362}
+  - {fileID: 8782506649322210036}
   - {fileID: 911478990034508905}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1004,7 +1004,7 @@ RectTransform:
   - {fileID: 5671403972445896105}
   - {fileID: 5671403972579014355}
   m_Father: {fileID: 5671403972130496440}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
