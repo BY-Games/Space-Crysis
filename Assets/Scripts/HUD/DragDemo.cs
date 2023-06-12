@@ -79,7 +79,6 @@ public class DragDemo : MonoBehaviour {
             new Vector2(originPosOnScreen.x - Screen.width / 2, originPosOnScreen.y - Screen.height / 2) /
             canvas.scaleFactor;
         endDragPoint = Camera.main.WorldToScreenPoint(cursorPos.position);
-        Debug.Log("CursorPos = " + cursorPos.localPosition);
         // -----------------------------------------
         // Debug.Log("End drag Vector " + endDragPoint);
         differenceToMouse = (endDragPoint - (Vector3)originPosOnScreen);
