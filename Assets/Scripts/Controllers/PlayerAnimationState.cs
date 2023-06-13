@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class PlayerAnimationState : MonoBehaviour {
+    
     private void Awake() {
         GameManager.OnGameStateChange += SetAnimationOnState;
     }
@@ -33,14 +35,29 @@ public class PlayerAnimationState : MonoBehaviour {
         }
     }
 
+
+
     private IEnumerator WaitAndDeactivate() {
         yield return new WaitForSeconds(1f);
 
         gameObject.SetActive(false);
     }
+    
+    public void ScaredAnimation() {
+        if (_playerAnim != null) {
+            _playerAnim.enabled = true;
+        }
 
-    public void ChangeAnimDynamic() {
-        
+        _playerAnim.runtimeAnimatorController = scaredAnimation ;
+    }
+    
+    public void StopScaredAnimation() {
+        if (_playerAnim != null) {
+            _playerAnim.enabled = false;
+        }
+
+        SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+        sr.sprite = defaultSprite;
     }
 
 
@@ -48,9 +65,13 @@ public class PlayerAnimationState : MonoBehaviour {
     [FormerlySerializedAs("_idleState")] [SerializeField]
     private RuntimeAnimatorController idleState;
 
+    [SerializeField]
+    private Sprite defaultSprite;
     [SerializeField] private RuntimeAnimatorController throwState;
     [SerializeField] private RuntimeAnimatorController winState;
     [SerializeField] private RuntimeAnimatorController eliminatedState;
+    [SerializeField] private RuntimeAnimatorController scaredAnimation;
+
 
 
     private Animator _playerAnim;

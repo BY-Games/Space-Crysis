@@ -1048,6 +1048,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &495459514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 495459515}
+  - component: {fileID: 495459517}
+  - component: {fileID: 495459516}
+  m_Layer: 0
+  m_Name: ScaringRadius
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &495459515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495459514}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8409, y: 0.8409, z: 0.8409}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3150892696981954855}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495459516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495459514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6df01fd7dfeed419673ea17de6487c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  astronautAnim: {fileID: 2094418719}
+--- !u!58 &495459517
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495459514}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,6 +2863,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1317368510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1317368511}
+  - component: {fileID: 1317368513}
+  - component: {fileID: 1317368512}
+  m_Layer: 0
+  m_Name: ScaringRadius
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1317368511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317368510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.96464, y: 0.96464, z: 0.96464}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 925528966}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1317368512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317368510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6df01fd7dfeed419673ea17de6487c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  astronautAnim: {fileID: 2094418719}
+--- !u!58 &1317368513
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317368510}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3
 --- !u!1 &1374078542
 GameObject:
   m_ObjectHideFlags: 0
@@ -4256,6 +4380,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4819209474139156208, guid: 3264f180237a57d46aac2450a7f3ad3a, type: 3}
   m_PrefabInstance: {fileID: 854452149}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1912920625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1912920626}
+  - component: {fileID: 1912920628}
+  - component: {fileID: 1912920627}
+  m_Layer: 0
+  m_Name: ScaringRadius
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1912920626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912920625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8409, y: 0.8409, z: 0.8409}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1197782647}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1912920627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912920625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6df01fd7dfeed419673ea17de6487c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  astronautAnim: {fileID: 2094418719}
+--- !u!58 &1912920628
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912920625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.5
 --- !u!1 &1948758808
 GameObject:
   m_ObjectHideFlags: 0
@@ -4764,6 +4950,14 @@ PrefabInstance:
       propertyPath: maxItemToThrow
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2476116709810000811, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 2544130169632828992, guid: bb842fe46e994e6b903ffa8af9ae0f36, type: 3}
+    - target: {fileID: 2476116709810000811, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
+      propertyPath: scaredAnimation
+      value: 
+      objectReference: {fileID: 9100000, guid: 3c6603ed82a8c534b9f7eff289e1b087, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
 --- !u!4 &2094418717 stripped
@@ -4776,6 +4970,17 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6193287321354194100, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
   m_PrefabInstance: {fileID: 2094418716}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2094418719 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2476116709810000811, guid: 81bb6f568f94c9b41b4759b3fd2fa160, type: 3}
+  m_PrefabInstance: {fileID: 2094418716}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1f74ed81d80804c97f265ed8a06a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2099204555
 PrefabInstance:
   m_ObjectHideFlags: 0

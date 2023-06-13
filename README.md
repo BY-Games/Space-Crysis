@@ -2,10 +2,13 @@
 A Game-Dev project of Astronaut and Survival.
 
 
-![Alt text](Assets/Formal%20Elements/tutorial.jpg)
-
-![Alt text](Assets/Formal%20Elements/tutorials2.jpg)
-
+![Alt text](Screenshot_2023-06-13_19-26-41.png)
+![Alt text](Screenshot_2023-06-13_19-26-50.png)
+![Alt text](Screenshot_2023-06-13_19-26-57.png)  
+![Alt text](Screenshot_2023-06-13_19-27-26.png) 
+![Alt text](Screenshot_2023-06-13_19-27-43.png) 
+![Alt text](Screenshot_2023-06-13_19-28-08.png)
+![Alt text](Screenshot_2023-06-13_19-28-36.png) 
 
 # Play on itch.io
 [Play](https://by-games.itch.io/space-crysis)
