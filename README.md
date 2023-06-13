@@ -1,4 +1,4 @@
-# Space-Crisis
+# Space-Crysis
 A Game-Dev project of Astronaut and Survival.
 
 
@@ -17,7 +17,7 @@ A Game-Dev project of Astronaut and Survival.
 
 
 # Overview
-Space Crisis is a puzzle game that tells the story of an astronaut who finds himself on a damaged spaceship that is about to crash. As he drifts through space, exhausted and with only a few tools at his disposal, he must use them wisely to navigate his way through the ship and reach the emergency switches before it's too late.
+Space Crysis is a puzzle game that tells the story of an astronaut who finds himself on a damaged spaceship that is about to crash. As he drifts through space, exhausted and with only a few tools at his disposal, he must use them wisely to navigate his way through the ship and reach the emergency switches before it's too late.
 
 This game is a single-player platformer designed for players aged 7 and up with low to medium puzzle-solving skills.
 
@@ -49,7 +49,7 @@ In level 1, there is a pipe object that will push the player toward the end of t
 
 
 # Credits
-Space Crisis Game was developed by [Yosef](https://github.com/YosefKahlon) and [Barak](https://github.com/barakdf).
+Space Crysis Game was developed by [Yosef](https://github.com/YosefKahlon) and [Barak](https://github.com/barakdf).
 
 ## Assets
 - [2D Character - Astronaut](https://assetstore.unity.com/packages/2d/characters/2d-character-astronaut-182650)
