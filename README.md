@@ -39,20 +39,38 @@ Drag your mouse on the screen to apply throwing force of your tools, use the rig
 
 # Code 
 
-The game includes 4 scenes, 2 Tutorial, and 2 level scenarios.
+The game includes 11 scenes,1 Opening, 2 Tutorials, and 9-level scenarios.
 
-[AnstonautController](Assets/Scripts/AstronautController.cs) Handle the movement mechanic of the astronaut, capture the mouse position while pressed down to determine the range of the swing of the shot. when the mouse press has released the distance and direction will be calculated and added to the Rigidbody-force multiplied by the custom force adder from the developer's choice.
+* [AnstonautController](Assets/Scripts/AstronautController.cs) handles the movement mechanics of the astronaut. It captures the mouse position while pressed down to determine the range of the shot's swing. When the mouse press is released, the distance and direction are calculated and added to the Rigidbody force, which is then multiplied by a custom force adder chosen by the developer.
 
 
-In level 1, there is a pipe object that will push the player toward the end of the pipe, the pipe object contain collider at the start point to detect collision and an end point for applying navigation. in [PipeThrower](Assets/Scripts/PipeThrower.cs), the OnCollisionEnter2D method will send the player to the end point of the pipe and add a force on the player's rigid body related to the relative velocity of the impact plus custom pipe property force set by the developer.
+* In one of the levels, there is a pipe object that will push the player toward the end of the pipe, the pipe object contains a collider at the start point to detect collision and an end point for applying navigation. in [PipeThrower](Assets/Scripts/PipeThrower.cs), the OnCollisionEnter2D method will send the player to the end point of the pipe and add a force on the player's rigid body related to the relative velocity of the impact plus custom pipe property force set by the developer.
 
+* In one of the levels, there is a saw object that poses a threat to the player. The saw can kill the player.
+
+* Another level features electricity that can kill the player.
+
+* One of the levels includes a black hole, which exerts a gravitational force on nearby objects. The black hole's influence affects the player and other interactable elements within its range. 
+
+* Game Manager
+The game employs a [GameManager.cs](https://github.com/BY-Games/Space-Crysis/blob/main/Assets/Scripts/Managers/GameManager.cs) script to detect and manage the state of the game. This script is responsible for overseeing game logic, such as tracking player progress, handling level transitions, and managing overall game flow.
+
+* Level Manager
+To facilitate level switching and progression, the game utilizes a [LevelManager.cs](https://github.com/BY-Games/Space-Crysis/blob/main/Assets/Scripts/Managers/LevelManager.cs) script. This script manages the loading and unloading of scenes, ensuring smooth transitions between levels and maintaining the appropriate sequence of gameplay.
+
+* Sound Manager
+The sound effects and audio elements in the game are controlled by a [SoundManager](https://github.com/BY-Games/Space-Crysis/blob/main/Assets/Scripts/Managers/SoundManager.cs) script. This script allows for the management and manipulation of various audio components, such as background music, sound effects, and ambient sounds, to enhance the overall gaming experience.
 
 
 # Credits
 Space Crysis Game was developed by [Yosef](https://github.com/YosefKahlon) and [Barak](https://github.com/barakdf).
 
+# Editor version
+2021.3.18f1
+
 ## Assets
 - [2D Character - Astronaut](https://assetstore.unity.com/packages/2d/characters/2d-character-astronaut-182650)
 - [Dotted Arrow](https://assetstore.unity.com/packages/tools/gui/dotted-arrow-213121)
 - [Basic Icons](https://assetstore.unity.com/packages/2d/gui/icons/basic-icons-139575)
+- [Lightning Bolt Effect for Unity](https://assetstore.unity.com/packages/tools/particles-effects/lightning-bolt-effect-for-unity-59471)
 
