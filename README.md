@@ -13,7 +13,9 @@ A Game-Dev project of Astronaut and Survival.
 # Play on itch.io
 [Play](https://by-games.itch.io/space-crysis)
 
-
+# Watch the trailer
+[Space Crysis | Official Trailer
+](https://www.youtube.com/watch?v=Rh7hFUMkDNg)
 
 
 # Overview
