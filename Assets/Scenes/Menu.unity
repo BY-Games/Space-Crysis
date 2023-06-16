@@ -1816,6 +1816,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1843913815431044787, guid: 3884e3a3ff10af74aacacf47b16ff70e, type: 3}
+      propertyPath: m_fontSize
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843913815431044787, guid: 3884e3a3ff10af74aacacf47b16ff70e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061061669076396336, guid: 3884e3a3ff10af74aacacf47b16ff70e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 279.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061061669076396336, guid: 3884e3a3ff10af74aacacf47b16ff70e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -219
+      objectReference: {fileID: 0}
     - target: {fileID: 8918096136082560650, guid: 3884e3a3ff10af74aacacf47b16ff70e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -6816,6 +6832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  playerState: 0
 --- !u!114 &1938202529
 MonoBehaviour:
   m_ObjectHideFlags: 0

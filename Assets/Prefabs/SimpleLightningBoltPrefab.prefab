@@ -239,3 +239,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e26e19aa0b37747ace83966467cc48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleEffect: 1
